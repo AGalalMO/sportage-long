@@ -8,7 +8,7 @@ const {i18n}=useTranslation('common')
         <div className="min-h-screen min-w-screen" dir="ltr">
 
         <div className='min-h-[30vh] lg:min-h-[73vh] w-screen relative bg-white' style={{
-            backgroundImage: `url('https://methods.ae/wp-content/uploads/connect-remote-control-pt.jpg')`,
+            backgroundImage: `url('https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/193d32e8-09b2-4a65-72ed-d59a0c428700/public')`,
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             backgroundSize:'cover'

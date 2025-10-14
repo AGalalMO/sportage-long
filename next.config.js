@@ -4,8 +4,8 @@ const { i18n } = require('./next-i18next.config');
 const nextConfig = {
   i18n,
   images: {
-    domains: ['your-domain.com'], // Add your domain if needed
-    unoptimized: true, // For static exports
+    domains: ['imagedelivery.net', 'methods.ae'],
+    unoptimized: false,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     formats: ['image/webp'],
@@ -18,14 +18,22 @@ const nextConfig = {
   // Enable static exports if you're not using server features
   headers: async () => [
     {
-      source: '/assets/images/:all*',
+      source: '/assets/:all*',
       headers: [
         {
           key: 'Cache-Control',
           value: 'public, max-age=31536000, immutable',
         },
       ],
-      
+    },
+    {
+      source: '/fonts/:all*',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=31536000, immutable',
+        },
+      ],
     },
   ],
 };
