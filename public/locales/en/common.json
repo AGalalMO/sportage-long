@@ -29,15 +29,15 @@
   "loading_360": "Loading 360° View...",
   "loading_images": "Loading images...",
   "sequence_complete": "Sequence Complete",
-  "kia_Tasman": "The Kia Tasman",
+  "kia_sportage": "The Kia sportage",
   "push_beyond_ordinary": "Dive into a New Dimension",
   "head_turning_design": "Head-turning Design",
   "led_headlights": "LED Star-map Headlights",
-  "led_headlights_description": "The vehicle is equipped with distinctive LED cube projector headlights and star-map daytime running lights (DRLs). These provide a wide stance and a premium presence, making the Tasman stand out both day and night",
+  "led_headlights_description": "The vehicle is equipped with distinctive LED cube projector headlights and star-map daytime running lights (DRLs). These provide a wide stance and a premium presence, making the sportage stand out both day and night",
   "led_rear_lamps": "LED Rear Combination Lamps",
   "led_rear_lamps_description": "Horizontally connected rear lamps wit LED lamps offering improved visibility and a modern aesthetic, complementing the car's futuristic design",
   "fastback_design": "Fastback Design",
-  "fastback_description": "The Tasman features a sleek fastback roofline, which not only enhances aerodynamics but also gives the car a sporty, coupe-like appearance",
+  "fastback_description": "The sportage features a sleek fastback roofline, which not only enhances aerodynamics but also gives the car a sporty, coupe-like appearance",
 
   "tiger_nose_grille": "Signature Tiger-nose Grille",
   "tiger_nose_description": "The front grille features a bold interpretation of Kia's signature tiger-nose grille, flanked by sleek LED headlights and chrome garnish for a confident and sophisticated look",
@@ -71,9 +71,9 @@
   "carplay_description": "Seamlessly integrates smartphone functionality with the vehicle's infotainment system",
   "comfort": "A Blend of Comfort and Practicality",
   "spacious_interior": "Spacious Interior",
-  "interior_description": "The Tasman boasts generous front legroom, with class-leading second-row legroom, ensuring passengers have ample space to relax",
+  "interior_description": "The sportage boasts generous front legroom, with class-leading second-row legroom, ensuring passengers have ample space to relax",
   "heated_ventilated_seats": "Heated & Ventilated Front Seats",
-  "heated_ventilated_description": "Heated and ventilated front seats provide year-round comfort, making the Tasman suitable for various climates",
+  "heated_ventilated_description": "Heated and ventilated front seats provide year-round comfort, making the sportage suitable for various climates",
   "premium_upholstery": "Premium Upholstery",
   "premium_upholstery_description": "The cabin features premium upholstery and finishes, contributing to a sophisticated and comfortable driving environment",
   "epb": "Electronic Parking Brake (EPB)",
@@ -113,13 +113,13 @@
   "power_delivery": "For Smoother Power Delivery",
   "drive_mode": "Drive Mode Selection",
   "drive_mode_description": "Allows Drivers to Customize Their Driving Experience Based on Preferences or Road Conditions",
-  "discover": " Discover Kia Tasman's Exterior & Interior in 360°",
+  "discover": " Discover Kia sportage's Exterior & Interior in 360°",
   "exterior": "Exterior",
   "interior": "Interior",
   "bookNow": "Book Now",
   "Highlights": "Highlights",
   "trim": "Trim",
-  "kia_footer": "The Kia Tasman is a bold, new movement that adds",
+  "kia_footer": "The Kia sportage is a bold, new movement that adds",
   "kia_footer2": "a dose of 'extraordinary' to our everyday lives.",
   "explore": "Explore More",
   "dimensions": "Dimensions (mm)",
@@ -140,7 +140,7 @@
   "ambient_lighting": "Ambient Lighting",
   "ambient_lighting_description": "The ambient mood lighting adds an extra touch that feels both soothing and luxurious.",
   "cupHolder": "Rotary Cup Holder",
-  "cupHolder_description": "The Tasman includes a convenient rotary cup holder in the center console, allowing for easy access and adjustment of beverage containers. This thoughtful design keeps drinks secure and within reach.",
+  "cupHolder_description": "The sportage includes a convenient rotary cup holder in the center console, allowing for easy access and adjustment of beverage containers. This thoughtful design keeps drinks secure and within reach.",
   "sequance_head": "LED Star-map Headlights",
   "sequance_head_description": "Equipped with LED cube projector headlights and star-map DRLs for a striking appearance day and night.",
   "sequance_head2": "LED Rear Combination Lamps",
@@ -149,16 +149,16 @@
   "rims": "18-inch Sport Rims",
   "beltLine": "Belt-line",
   "beltLine_description": "The dynamic fastback-style silhouette. Create a sporty image with lowered overall height and beltline.",
-  "rims_description": "Available on select trims, the 18-inch alloy wheels add a sporty touch to the Tasman's exterior. Providing a responsive driving feel and complementing the car's dynamic design.",
+  "rims_description": "Available on select trims, the 18-inch alloy wheels add a sporty touch to the sportage's exterior. Providing a responsive driving feel and complementing the car's dynamic design.",
   "spec_ext": "Exterior Features",
   "enginePerformance": "Engine & Performance",
   "spec_int": "Interior Features",
   "safetyFeatures": "Safety Features",
   "Safety": "Safety",
   "Comfort": "Comfort",
-  "trimSpecs": "Kia Tasman Trims Specifications",
-  "notify":"Specifications and features may vary by region and market.",
-"convenience":"Convenience",
+  "trimSpecs": "Kia sportage Trims Specifications",
+  "notify": "Specifications and features may vary by region and market.",
+  "convenience": "Convenience",
   "colors": {
     "wave_blue": "Denim Blue",
     "fiery_red": "Runway Red",
@@ -167,9 +167,9 @@
     "clear_white": "Clear White",
     "clear_white_fender": "Clear White / Body Color Fenders",
     "snow_white_pearl": "Snow White Pearl",
-      "beigeFender":"Tan Beige / Body Color Fenders",
-      "beige":"Tan Beige ",
-      "gray":"Interstellar Gray",
+    "beigeFender": "Tan Beige / Body Color Fenders",
+    "beige": "Tan Beige ",
+    "gray": "Interstellar Gray",
     "steel_gray": "Steel Gray",
 
     "onyx_black": "Terracotta Brown / Deep Green"
@@ -233,7 +233,7 @@
         "mirrors": "Electric Folding mirrors"
       }
     },
-    "10":{
+    "10": {
       "exterior": {
         "steelWheels": "16\" Alloy wheels",
         "headlamps": "LED Headlamp + Run. Light+Position lamp",
@@ -259,7 +259,7 @@
         "armrest": "Armrest with Up&Down function"
       }
     },
-    "11":{
+    "11": {
       "exterior": {
         "alloyWheels": "17\" Alloy wheels",
         "headlamps": "LED Headlamp + Run. Light+Position lamp",
@@ -288,7 +288,7 @@
         "parkingBrake": "EPB Electronic Parking Brake"
       }
     },
-    "12":{
+    "12": {
       "exterior_features": {
         "alloy_wheels": "17\" Alloy wheels",
         "headlamp": "LED Headlamp + Run. Light+Position lamp",
@@ -321,7 +321,7 @@
         "ecm": "ECM (Electronic chromic mirror)"
       }
     },
-    "13":{
+    "13": {
       "exterior": {
         "alloyWheels": "17\" Alloy wheels",
         "headlamps": "LED Headlamp + Run. Light+Position lamp",
@@ -361,7 +361,7 @@
         "tailgate": "Power opening tailgate"
       }
     },
-    "20":{
+    "20": {
       "exterior": {
         "gtLineDesign": "GT-Line design",
         "alloyWheels": "18\" Alloy wheels",
@@ -396,7 +396,7 @@
         "tailgate": "Power opening tailgate"
       }
     },
-    "21":{
+    "21": {
       "exterior": {
         "gtLineDesign": "GT-Line design",
         "alloyWheels": "18\" Alloy wheels",
@@ -440,12 +440,5 @@
         "tailgate": "Power opening tailgate"
       }
     }
-
-
-
-
-
-
   }
-
 }

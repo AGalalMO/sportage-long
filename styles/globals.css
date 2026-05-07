@@ -7,7 +7,8 @@ body {
   font-family: 'InterRegular';
   overflow-x: hidden !important;
   max-width: 100vw !important;
- 
+  -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
         /* Firefox */
 }
@@ -24,7 +25,7 @@ a {
 html[lang='ar'] {
   direction: rtl;
   body {
-      font-family: 'GESSTwoMedium', 'InterRegular', sans-serif !important;
+      font-family: 'GE-SS-Two-Medium', 'InterRegular', sans-serif !important;
         font-feature-settings: "locl" 1;
     }
 }
@@ -63,42 +64,45 @@ html[lang='en'] {
 @font-face {
   font-family: "InterBold";
   src: local("InterBold"),
-    url(../public/fonts/KiaSignatureFixBold.ttf) format("truetype");
+    url(../public/fonts/KiaSignatureBold.woff2) format("woff2");
+      font-weight: 700;
   font-display: swap;
 }
 
 @font-face {
   font-family: "InterLight";
   src: local("InterLight"),
-    url(../public/fonts/KiaSignatureFixLight.ttf) format("truetype");
+    url(../public/fonts/KiaSignatureLight.woff2) format("woff2");
+      font-weight: 300;
   font-display: swap;
 }
 
 @font-face {
   font-family: "InterRegular";
   src: local("InterRegular"),
-    url(../public/fonts/KiaSignatureFixRegular.ttf) format("truetype");
+    url(../public/fonts/KiaSignatureRegular.woff2) format("woff2");
+      font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
   font-family: "GSSBold";
   src: local("GSSBold"),
-    url(../public/fonts/GESSTwoBold.ttf) format("truetype");
-  font-display: swap;
+    url(../public/fonts/GE-SS-Two-Bold.woff2) format("woff2");
+      font-display: swap;
 }
 
 @font-face {
   font-family: "GSSLight";
   src: local("GSSLight"),
-    url(../public/fonts/GESSTwoLight.ttf) format("truetype");
-  font-display: swap;
+    url(../public/fonts/GE-SS-Two-Light.woff2) format("woff2");
+      font-display: swap;
 }
 
 @font-face {
   font-family: "GSSMedium";
   src: local("GSSMedium"),
-    url(../public/fonts/GESSTwoMedium.ttf) format("truetype");
+    url(../public/fonts/GE-SS-Two-Medium.woff2) format("woff2");
   font-display: swap;
 }
 /* Webkit browsers (Chrome, Safari, newer Edge) */

@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { SwiperSection } from './SwiperSection';
 import { useTranslation } from 'react-i18next';
 import { useRouter } from 'next/router';
+import Footer from '@src/common/layout/components/footer';
 
 const ParallaxSectionSecond = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -44,7 +45,7 @@ const ParallaxSectionSecond = () => {
                 {`
               .parallax-container1 {
   position: relative;
-  height: 200vh; /* Make the container tall enough to allow scrolling */
+  height: 100vh; /* Make the container tall enough to allow scrolling */
   overflow: hidden;
     @media (max-width: 1024px) {
   height:100vh;
@@ -102,45 +103,46 @@ const ParallaxSectionSecond = () => {
 }
                 
                 `}
+                {/* */}
+
             </style>
 
             <div className="parallax-container1" ref={sectionRef}  >
-                <div className={`parallax-video1 ${isInView?'':'opacity-0'}`}>
-            <img src='https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/b90371ae-573e-45e4-ddbd-04f055cbdd00/semi' className="image-element " loading="lazy" decoding="async">
+                <div className={`parallax-video1 ${isInView ? '' : 'opacity-0'}`} >
+                    <img src='/assets/stills/footer.jpeg' className="image-element " loading="lazy" decoding="async">
 
                     </img>
                 </div>
-                <div class="bg-gradient-to-b from-0% h-[50vh] lg:h-screen w-screen from-[#06141F]/50 to-100% to-[#00000000]" id="bg-section">
-                    
-                   
-                  
+
+             
+                <div class="h-[100vh] w-screen  flex flex-col justify-between" style={{
+                    background: 'linear-gradient(180deg, #000000 0%, rgba(6,20,31,0.2) 100%)',
+                
+                }} id="bg-section">
+                    <div
+                        style={{
+                            height: '20vh',
+                            display: 'flex',
+                            alignItems: 'center',
+                            paddingLeft: '10%',
+                            paddingRight: '10%',
+                            background: 'linear-gradient(180deg, #06141F 0%, rgba(6,20,31,0) 100%)',
+
+                        }}
+                    >
+                        <p style={{ color: 'white', fontSize: '1rem', lineHeight: '1.7', maxWidth: '420px', fontFamily: locale === 'ar' ? 'GSSLight' : 'InterRegular' }}>
+                            {locale === 'ar'
+                                ? 'لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسينج إيليت. أوت إيليت تيلوس، لوكتوس نيك أولامكوربير ماتيس، بولفينار دابيبوس ليو.'
+                                : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.'}
+                        </p>
+                    </div>
+
+
+
+                    <Footer removeMedia={false} /> 
 
 
                 </div>
-                <div className="content22 "
-                    id='safety'
-                    ref={textRef}>
-            <video src='/assets/videos/ktk-safety.webm'
-              autoPlay
-              muted
-              loop
-              playsInline
-              webkit-playsinline="true"
-              controls={false}
-              controlsList="noremoteplayback"
-              disablePictureInPicture className='w-screen h-[50vh] lg:h-screen object-cover'/>
-                    <div className='absolute w-full bottom-0 start-0 p-3 lg:p-10  bg-gradient-to-t h-[50vh] from-white to-transparent flex flex-col justify-end items-center'>
-                        <p className={`text-xl lg:text-[42px] text-black ${locale == 'ar' ? 'font-[GSSMedium]' : 'font-[InterBold]'}  text-center`}> {i18n?.language == 'ar' ?
-                            <>
-                                {`أنظمة مساعدة السائق `}
-                                <span className='font-[InterBold]'>(ADAS)</span>
-                                
-                            </>
-                        
-                        : `Advanced Driver Assistance System (ADAS)`} </p>
-                    </div>
-                    </div>
-                   
                
             </div>
         </ParallaxProvider>

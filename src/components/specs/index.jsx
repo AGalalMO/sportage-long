@@ -362,7 +362,7 @@ const Specs = () => {
                         {isArabic ?`أختر الفئة التي تناسبك`:`  Find the perfect trim for you`}
                     </h1>
                     <p className={`text-base md:text-lg text-[#06141F] text-start ${isArabic ? 'font-[GSSMedium]' : 'font-[InterRegular]'}`}>
-                        {isArabic ?`من الأداء القوي إلى التفاصيل الفاخرة، توفر لك تاسمان الخيار الذي يعكس شخصيتك ويُعبّر عن أسلوب قيادتك`:`  From rugged to refined, choose the Tasman trim that matches your drive and your style.`}
+                        {isArabic ? `من الأداء القوي إلى التفاصيل الفاخرة، توفر لك سبورتاج الخيار الذي يعكس شخصيتك ويُعبّر عن أسلوب قيادتك` : `  From rugged to refined, choose the sportage trim that matches your drive and your style.`}
                     </p>
                 </div>
 

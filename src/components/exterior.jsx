@@ -37,9 +37,9 @@ export const Exterior = () => {
             >
                 {i18n?.language == 'ar' ? `التصميم الخارجي` : `Exterior`}
             </motion.p>
-            <FloatingText desc={i18n?.language == 'ar' ? `تقدم كيا تاسمان لغة تصميم حديثة مستندة إلى الوظائف، منسجمة مع هوية عائلة كيا.
+            <FloatingText desc={i18n?.language == 'ar' ? `تقدم كيا سبورتاج لغة تصميم حديثة مستندة إلى الوظائف، منسجمة مع هوية عائلة كيا.
 تتميز الشبكة الأمامية المستوحاة من "وجه النمر" بأضواء رأسية جريئة وصدام أمامي قوي وغطاء محرك عريض ومرتفع، يُشير إلى قوة الأداء الكامنة.
-ويبرز المظهر الجانبي الواثق مع لمسات رفارف هندسية فريدة وعملية، ليمنح المركبة حضورًا طاغيًا على الطريق.`: `The Kia Tasman applies the latest function-based pickup design language to the Kia family look. The tiger-face radiator grille is framed by bold, vertical lights, a strong front bumper, and a broad, high hood that hints at powerful machinery within. A confident side profile, with unique and practical geometric fender highlights, gives the vehicle a commanding stance.`} />
+ويبرز المظهر الجانبي الواثق مع لمسات رفارف هندسية فريدة وعملية، ليمنح المركبة حضورًا طاغيًا على الطريق.`: `The Kia sportage applies the latest function-based pickup design language to the Kia family look. The tiger-face radiator grille is framed by bold, vertical lights, a strong front bumper, and a broad, high hood that hints at powerful machinery within. A confident side profile, with unique and practical geometric fender highlights, gives the vehicle a commanding stance.`} />
         </div>
     )
 }

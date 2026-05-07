@@ -1,30 +1,6 @@
 export const FRAME_COUNT = 72;
 
-export const CDN_SNOW = [
 
-    "https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/4f1d9763-870f-444a-dd93-56bddfafc700/semi",
-    
-
-
-]
-export const CDN_WHITE = [
-
-    "https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/dc9145c3-96b3-4fa0-5723-3f726d933200/semi",
-   
-
-
-
-]
-export const CDN_WHITE_FENDER = [
-    "https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/26875a6c-b83b-4891-fee5-a4f143d57400/semi",
-    
-
-
-
-
-
-
-]
 
 export const CDN_BEIGE_FENDER = [
 
@@ -104,82 +80,6 @@ export const CDN_BEIGE_FENDER = [
 
 ]
 
-export const CDN_BEIGE_STATIC = [
-
-
-    "https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/0bad57eb-9abc-415c-5f0a-5ad463d03a00/semi",
-    
 
 
 
-]
-export const CDN_TAN_BEIGE = [
-
-   
-    "https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/cae593d8-0d23-4725-b60a-df9106849600/semi",
-    
-
-
-
-
-]
-
-export const CDN_BLUE = [
-    "https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/7cdbe884-b878-4175-9cd2-bd77f6855c00/semi",
-    
-
-
-
-
-
-
-
-]
-export const CDN_RED = [
-
-    "https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/d4438ba1-facb-436d-c960-8571fbc77c00/semi",
-    
-
-
-
-]
-
-
-export const CDN_STEEL_GRAY = [
-
-    "https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/cc5d6abf-3239-4f06-a6ec-d1596a036d00/semi",
-   
-
-
-]
-export const CDN_INTERSTELLAR = [
-    "https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/6720056e-d1a2-442b-183d-219b36dcc600/semi",
-    
-
-
-
-
-
-
-
-]
-
-
-export const CDN_GREEN = [
-
-    "https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/d77861c3-32f7-4fb9-27b5-07bfce493600/semi",
-  
-
-
-]
-
-
-export const CDN_BLACK = [
-    "https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/e1b859e9-eae9-4148-d69c-8f83be36ff00/semi",
-    
-
-
-
-
-
-]

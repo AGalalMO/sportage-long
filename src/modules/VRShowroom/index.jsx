@@ -1,12 +1,14 @@
 'use client';;
 import { useEffect, useState, useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import VRControls from './VRControls';
 import { useTranslation } from 'next-i18next';
 import PanoramaViewer from '@src/components/ImageViewer360';
 import { useRouter } from 'next/router';
-import {  CDN_BEIGE_STATIC, CDN_BLACK, CDN_BLUE, CDN_GREEN, CDN_INTERSTELLAR, CDN_RED, CDN_SNOW, CDN_STEEL_GRAY, CDN_TAN_BEIGE, CDN_WHITE, CDN_WHITE_FENDER, FRAME_COUNT } from '@src/constants/imageSequence';
-const VRShowroom = ({ showControl=false }) => {
+import { FRAME_COUNT } from '@src/constants/imageSequence';
+const VRShowroom = ({ showControl = false }) => {
   const containerRef = useRef(null);
+  const sectionRef = useRef(null);
   const [view, setView] = useState('exterior')
 
   const [currentFrame, setCurrentFrame] = useState(0);
@@ -15,39 +17,48 @@ const VRShowroom = ({ showControl=false }) => {
   const isDragging = useRef(false);
   const startX = useRef(0);
   const autoRotateRef = useRef(null);
-  const lastTimeRef = useRef(0);
-  const [currentColor, setCurrentColor] = useState('beige');
+  const [currentColor, setCurrentColor] = useState('white');
   const framePositionRef = useRef(0);
   const [colorTextKey, setColorTextKey] = useState(0);
-  const { t ,i18n} = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
   const { locale } = useRouter();
 
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start end', 'end start'],
+  });
+  // Slide in from right on enter, fade out on leave (x stays put while opacity drops)
+  const panelX = useTransform(scrollYProgress, [0, 0.15, 0.4, 1], ['110%', '110%', '0%', '0%']);
+  const panelOpacity = useTransform(scrollYProgress, [0, 0.15, 0.4, 0.68, 0.85], [0, 0, 1, 1, 0]);
+
+  const IMAGES = [
+    ['/assets/colors/snow_white.jpeg'],
+    ['/assets/colors/yacht_blur.jpeg'],
+    ['/assets/colors/arora_black.jpeg'],
+    ['/assets/colors/auban_gray_matt.jpeg'],
+    ['/assets/colors/urban_gray.jpeg'],
+    ['/assets/colors/wolf_gray.jpeg'],
+    ['/assets/colors/yacht_blur.jpeg']]
 
   const COLORS = [
-    { id: 'beige', name: t('colors.beige'), hex: '#939393', chip: "https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/08342870-b29c-4b1c-8e32-796b0139d200/public" },
-    { id: 'tan', name: t('colors.beigeFender'), hex: '#000000', chip:"https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/d53c6dbf-f7c7-490f-c1d4-d60f3eb44900/public" },
-    { id: 'white', name: t('colors.clear_white'), hex: '#FFFFFF', chip:"https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/4952bc85-a2df-46ab-081d-d25f6177ce00/public"},
-    { id: 'whiteFender', name: t('colors.clear_white_fender'), hex: '#909598', chip:"https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/4a912299-4456-49f6-05a4-321c33d18e00/public" },
-    { id: 'green', name: t('colors.green'), hex: "#565656", chip: "https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/00e9b9b6-6c5e-446f-6b7a-d9bc41e71a00/public" },
-    { id: 'blue', name: t('colors.wave_blue'), hex: '#344f7e', chip:"https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/a8f7b28b-ff09-42b2-b0ab-3eccbed81500/public" },
-    { id: 'red', name: t('colors.fiery_red'), hex: '#ae2736', chip:"https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/15311daf-6c93-409c-f457-e8c1867d7600/public" },
-    { id: 'gray', name: t('colors.gray'), hex: "#565656", chip:"https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/2ec05ee8-5a4d-4bcd-0aa7-1d0308c8e300/public" },
-    { id: 'snow', name: t('colors.snow_white_pearl'), hex: '#f6f6f6', chip:"https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/ad847c7a-3269-443f-42f4-db56d986c600/public" },
-    { id: 'steel', name: t('colors.steel_gray'), hex: "#565656", chip: "https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/34c49397-583e-4209-7ef7-06d6e17d4b00/public" },
-    { id: 'black', name: t('colors.black'), hex: "#565656", chip: "https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/b969f132-bf2b-4e32-1373-f54363d4ed00/public" },
+    { id: 'white', name: 'Snow White Pearl', hex: '#F0EEE9', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/4952bc85-a2df-46ab-081d-d25f6177ce00/public' },
+    { id: 'blue', name: 'Yacht Blue', hex: '#2E4B72', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/a8f7b28b-ff09-42b2-b0ab-3eccbed81500/public' },
+    { id: 'black', name: 'Aurora Black Pearl', hex: '#1A1A1A', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/b969f132-bf2b-4e32-1373-f54363d4ed00/public' },
+    { id: 'matt', name: 'Urban Gray Matte', hex: '#7A7D7F', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/15311daf-6c93-409c-f457-e8c1867d7600/public' },
+    { id: 'urban', name: 'Urban Gray', hex: '#9298A0', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/08342870-b29c-4b1c-8e32-796b0139d200/public' },
+    { id: 'wolf', name: 'Wolf Gray', hex: '#4A4D50', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/2ec05ee8-5a4d-4bcd-0aa7-1d0308c8e300/public' },
+    { id: 'wood', name: 'Jungle Wood Green', hex: '#3D4B38', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/ad847c7a-3269-443f-42f4-db56d986c600/public' },
   ];
 
   const preloadColorImages = async colorId => {
     const urls = colorId === 'snow' ?
-      CDN_SNOW : colorId === 'white' ?
-        CDN_WHITE : colorId === 'whiteFender' ?
-          CDN_WHITE_FENDER : colorId === 'tan' ?
-            CDN_TAN_BEIGE : colorId === 'beige' ?
-              CDN_BEIGE_STATIC : colorId === 'blue' ?
-                CDN_BLUE : colorId === 'red' ?
-                  CDN_RED : colorId === 'steel' ?
-                    CDN_STEEL_GRAY : colorId === 'gray' ? CDN_INTERSTELLAR : colorId =='green'?CDN_GREEN: CDN_BLACK;
-
+      IMAGES[0] : colorId === 'blue' ?
+        IMAGES[1] : colorId === 'black' ?
+          IMAGES[2] : colorId === 'matt' ?
+            IMAGES[3] : colorId === 'urban' ?
+              IMAGES[4] : colorId === 'wolf' ?
+                IMAGES[5] : colorId === 'wood' ?
+                  IMAGES[6] : IMAGES[0]
     const imageElements = urls.map(url => {
       const img = new Image();
       img.src = url;
@@ -181,94 +192,96 @@ const VRShowroom = ({ showControl=false }) => {
     console.error('Image failed to load:', e.target.src);
     e.target.src = e.target.src;
   };
-
-  if (!isLoaded || !loadedImages[currentColor]) {
-    return (
-      <div
-        className="vr-container"
-        style={{
-          aspectRatio: '16/9',
-          maxWidth: '100%',
-          background: 'black',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <div style={{ color: 'white' }}>{t('loading')}</div>
-      </div>
-    );
-  }
+  console.log('Loaded ', loadedImages);
+  console.log('Loaded ', currentColor);
 
   return (
     <div
+      ref={sectionRef}
       className={`vr-showroom h-[500px] showRoom-container lg:h-screen z-[110]`}
       style={{
         aspectRatio: '16/9',
         maxWidth: '100%',
         position: 'relative',
-        background: 'black',
+        background: '#06141F',
         willChange: 'transform',
         backfaceVisibility: 'hidden',
         transform: 'translateZ(0)',
       }}
     >
-      <p id='vrShowroomText' className={`text-white text-base  md:text-[28px] z-[50] drop-shadow-2xl [text-shadow:_2px_2px_2px_rgba(0,0,0,0.4)] !absolute start-0 text-center lg:text-start lg:start-10 top-12 lg:!top-22  w-full leading-1   ${locale == 'ar' ? 'font-["GSSBold"]' : 'font-["InterBold"]'}`}>
-        {i18n?.language == 'ar' ? showControl ? `استكشف تفاصيل تاسمان من الداخل والخارج` : `كيا تاسمان تلبي جميع الأذواق` : showControl ?`Discover Kia Tasman's Exterior & Interior in 360°`: 'The Tasman Meets All Tastes'}
-      </p>
-      <div
-          className='mt-0 lg:mt-12.5 absolute bottom-3 lg:bottom-12.5 w-full text-white text-sm z-50 flex flex-col justify-end ps-0 lg:ps-[70px] gap-2 lg:gap-4 items-center'
-        
+      {(!isLoaded || !loadedImages[currentColor]) && (
+        <div
+          className="absolute inset-0 flex items-center justify-center bg-black z-[300]"
+        >
+          <div style={{ color: 'white' }}>{t('loading')}</div>
+        </div>
+      )}
+      {/* <p id='vrShowroomText' className={`text-white text-base  md:text-[28px] z-[50] drop-shadow-2xl [text-shadow:_2px_2px_2px_rgba(0,0,0,0.4)] !absolute start-0 text-center lg:text-start lg:start-10 top-12 lg:!top-22  w-full leading-1   ${locale == 'ar' ? 'font-["GSSBold"]' : 'font-["InterBold"]'}`}>
+        {i18n?.language == 'ar' ? showControl ? `استكشف تفاصيل تاسمان من الداخل والخارج` : `كيا تاسمان تلبي جميع الأذواق` : showControl ? `Discover Kia Tasman's Exterior & Interior in 360°` : 'The Tasman Meets All Tastes'}
+      </p> */}
+      {/* Scroll-animated color picker panel — slides in from right, fades out on leave */}
+      <motion.div
+        className="absolute top-1/2 min-h-[380px] max-w-[420px] justify-between -translate-y-1/2 z-[200] pointer-events-auto
+                   bg-black/50 backdrop-blur-md rounded-2xl flex flex-col gap-4
+                   border border-white/10"
+        style={{
+          right: '60px',
+          padding: '20px',
+          x: panelX,
+          opacity: panelOpacity,
+        }}
       >
-      
+        {/* Personalize label */}
+        <p className="text-[#A3A8AD]   tracking-widest text-lg font-[InterBold] " >
+          Personalize
+        </p>
 
-       
-        {view == 'exterior' ?
-          <div className='flex items-center flex-row-reverse gap-2'>
+        {/* Heading */}
+        <h3 className="text-white font-[InterBold] text-xl">
+          Choose Your Color
+        </h3>
 
-            {showControl ? null : <div className='flex flex-col items-center gap-2 lg:gap-4'>
-              <p
-                key={colorTextKey}
-                className={`text-white text-base lg:text-2xl animate-fadeInUp ${i18n?.language == 'ar' ? 'font-[GSSMedium]' : 'font-[InterBold]'}`}
-              >
-                {COLORS?.filter?.((item) => item?.id == currentColor)?.[0]?.name}
-              </p>
-              <div className='flex  gap-1.5 lg:gap-3' dir='ltr' >
-                {COLORS.map(color => (
-                  <div
-                    key={color.id}
-                    className='flex items-center gap-2 '
-                  >
-                    <button
-                      key={color.name}
-                      className=' rounded-sm w-7 btn-color-showRoom h-7 md:w-[50px] md:h-[50px] hover:scale-110 cursor-pointer '
-                      onClick={() => handleColorChange(color.id)}
-                      style={{
-                        background: `url(${color.chip}) no-repeat center center`,
+        {/* Color swatches */}
+        <div className="flex flex-wrap gap-3 justify-start">
+          {COLORS.map(color => (
+            <button
+              key={color.id}
+              onClick={() => handleColorChange(color.id)}
+              className="rounded-full cursor-pointer transition-transform  bg-cover bg-center"
+              style={{
+                background: color.hex,
+                outline: currentColor === color.id ? '2px solid white' : '2px solid transparent',
+                outlineOffset: '2px',
+                width: '40px',
+                height: '40px',
+                flexShrink: 0,
+              }}
+              aria-label={color.name}
+            />
+          ))}
+        </div>
 
-                        backgroundSize: 'cover',
-                      }}
+        {/* Selected color name */}
+        <p
+          key={colorTextKey}
+          className={`text-white font-medium text-center animate-fadeInUp text-xl ${i18n?.language === 'ar' ? "font-['GSSMedium']" : "font-['InterBold']"}`}
+        >
+          {COLORS.find(c => c.id === currentColor)?.name}
+        </p>
+
+        <hr className="border-white" />
+
+        {/* 360 View label */}
+        <div className="flex items-center justify-center gap-2 text-white text-base font-[InterBold]">
+          <img src="/assets/svg/360-view.svg" alt="360 View" className="w-10 h-10 invert" />
+          360 View
+        </div>
+
+        {/* Exterior / Interior toggle */}
+        <VRControls onViewChange={setView} view={view} />
+      </motion.div>
 
 
-                    />
-
-
-                  </div>
-                ))}
-              </div>
-            </div>}
-         
-          </div> : <p className={`text-white text-lg md:text-xl btn-showRoom mt-2 ${locale == 'ar' ? 'font-["GSSBold"]' : 'font-["InterBold"]'}`}>        {t('colors.onyx_black')}</p>
-        }
-        {showControl ? <VRControls
-
-          onViewChange={setView}
-          view={view}
-
-        /> :null}
-      </div>
-     
-     
       <div
         ref={containerRef}
         style={{
@@ -276,7 +289,7 @@ const VRShowroom = ({ showControl=false }) => {
           height: '100%',
           position: 'relative',
           overflow: 'hidden',
-          cursor:'pointer',
+          cursor: 'pointer',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -289,14 +302,14 @@ const VRShowroom = ({ showControl=false }) => {
         onTouchMove={null}
         onTouchEnd={null}
       >
-        
+
         {view == 'exterior' ? <img
-          src={loadedImages[currentColor][currentFrame]}
+          src={loadedImages[currentColor]}
           alt={`360° View Frame ${currentFrame + 1}`}
 
 
           onError={handleImageError}
-         
+
           style={{
             maxWidth: '100%',
             maxHeight: '100%',
@@ -308,22 +321,22 @@ const VRShowroom = ({ showControl=false }) => {
             minHeight: '500px',
           }}
           draggable={false}
-         
+
         /> :
           <PanoramaViewer
             imageUrl="/assets/ktk-int360-v2.png"
 
           />
-         
-        } 
+
+        }
       </div>
 
-    
 
-     
-   
 
-    
+
+
+
+
     </div>
   );
 };

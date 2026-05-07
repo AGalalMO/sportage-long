@@ -10,29 +10,12 @@ export default function Footer ({ removeMedia }) {
           
 {pathname.includes('configurator')?null:
 <>
-                    <div className="w-screen bg-[url('https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/ff405cbc-5555-4b50-4e1d-1ba45e99d800/public')] footer-img  bg-no-repeat flex flex-col justify-start items-start bg-cover bg-center h-[40vh] lg:h-screen bg-[#05141F]">
-                        <div className={`${locale == 'ar' ? 'min-h-[8vh] lg:min-h-[25vh]' : 'min-h-[8vh] lg:min-h-[40vh]'}  footer-img-text lg:mt-0   flex w-full flex-col justify-center `}
-                 dir="ltr" >
-                            <div className="bg-gradient-to-b from-white to-transparent w-full flex flex-col justify-between   h-[40vh]">
-                                <div className={`w-full px-12 flex flex-col gap-5 mx-auto  ${isArabic ?'items-end':''}`}>
-                                    <p className={`text-xl lg:text-[40px] text-start ${isArabic ?'font-[GSSMedium]':'font-[InterBold]'}`}>{isArabic ?`أينما تأخذك الحياة`:`Wherever life takes you`}</p>
-                                    <p dir={locale=='ar'?'rtl':'ltr'} className={`text-sm lg:text-lg text-black text-start ${isArabic ? 'font-[GSSMedium]' : 'font-[InterRegular]'}`}>
-                                        {isArabic ? `سواء كنت تتجول في شوارع المدينة أو تتحدى أصعب الطرق. عِش الحرية الحقيقية وجرّب مزيج القوة والأناقة الذي لا تقدمه سوى كيا تاسمان.` : <>
-                                        
-                                            Whether navigating city streets or conquering the toughest trails. Embrace the freedom <br />
-                                            to go further and experience the perfect blend of capability and style<br />
-                                            that only Kia Tasman can deliver.</>}
-                                      
-
-                                    </p>
-                                </div>
-                           </div>
-                   
-                         
-
-                </div>
-                    </div>
-                    <div dir={'ltr'} className={`!bg-[#05141F] w-full  flex  flex-col lg:flex-row  items-center h-[260px] py-10 lg:py-0 lg:h-[120px] ${removeMedia ? 'justify-center' :'justify-between'}  px-10 relative `}>
+                    
+                    <div
+                        style={{
+                            background:'linear-gradient(180deg, #00000000 0%, #000000 100%)'
+                    }}
+                        dir={'ltr'} className={`! w-full  flex  flex-col lg:flex-row  items-center h-[15vh] py-10 lg:py-0  ${removeMedia ? 'justify-center' : 'justify-between'}  px-10 relative `}>
 
                         <div className={`flex flex-col gap-2 items-center justify-center lg:justify-start ${removeMedia ? 'lg:items-center' :'lg:items-start'}`}>
                             <img src='/assets/images/logoWhite.png' width={100} height={37} loading="lazy" decoding="async" />

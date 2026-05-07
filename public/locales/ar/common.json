@@ -17,7 +17,7 @@
   "loading_sequence": "جارٍ تحميل التسلسل...",
   "animation_complete": "اكتملت الحركة!",
   "scroll_naturally": "يمكنك التمرير بشكل طبيعي الآن.",
-  "test":"texxst",
+  "test": "texxst",
   "color_names_red": "أحمر قرمزي",
   "color_names_blue": "أزرق محيطي",
   "color_names_white": "أبيض لؤلؤي",
@@ -27,7 +27,7 @@
   "loading_images": "جارٍ تحميل الصور...",
   "sequence_complete": "اكتمل التسلسل",
   "kia_k4": "كيا K4 الجديدة",
-  "kia_Tasman": "كيا تاسمان",
+  "kia_sportage": "كيا سبورتاج",
   "push_beyond_ordinary": "من عالم آخر",
   "notify": "تنويه: قد تختلف المواصفات والميزات حسب المنطقة أو السوق.",
   "head_turning_design": "تصميم لافت للنظر لانطباع جريء",
@@ -168,7 +168,7 @@
 
     "onyx_black": "بني تراكوتا / أخضر غامق"
   },
-  
+
   "explore_more": "استكشف المزيد",
   "specTrimsSpecs": {
     "00": {

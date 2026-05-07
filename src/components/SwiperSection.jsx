@@ -15,17 +15,17 @@ const isArabic=i18n?.language=='ar'
         {
             image: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/f44c6bdf-0295-4e7c-02b4-bc1b8f973d00/public',
             featureTitle: isArabic ? `عجلات ألمنيوم 17 إنش مع إطارات لجميع التضاريس` : '17” Alloy Wheels with All-Terrain Tires',
-            featureDescription: isArabic ? `تصميم نظيف وواثق يمزج الأداء اليومي بالأناقة المتحفظة. تمنح هذه العجلات كيا تاسمان لمسة راقية.` : 'A clean, confident design that blends everyday performance with understated style. These alloys bring a refined edge to your Tasman’s foundation.'
+            featureDescription: isArabic ? `تصميم نظيف وواثق يمزج الأداء اليومي بالأناقة المتحفظة. تمنح هذه العجلات كيا سبورتاج لمسة راقية.` : 'A clean, confident design that blends everyday performance with understated style. These alloys bring a refined edge to your sportage’s foundation.'
         },
         {
             image: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/0d1507c4-c94f-45c8-33df-c29ba19ab800/public',
             featureTitle: isArabic ?`مصابيح أمامية LED`: 'LED Projection Headlights',
-            featureDescription: isArabic ? `مصابيح تاسمان الأمامية بتقنية LED تضيء الطريق بوضوح ودقة , مثالية للقيادة أثناء الليل او النهار في مختلف الظروف.` :'Shine brighter, see further. The Tasman’s LED headlights cut through the dark with precision and clarity – built for late-night drives and early starts.'
+            featureDescription: isArabic ? `مصابيح سبورتاج الأمامية بتقنية LED تضيء الطريق بوضوح ودقة , مثالية للقيادة أثناء الليل او النهار في مختلف الظروف.` : 'Shine brighter, see further. The sportage’s LED headlights cut through the dark with precision and clarity – built for late-night drives and early starts.'
         },
         {
             image: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/2dc0d5c1-4ee1-496b-ffff-d0f1c1e16400/public',
             featureTitle: isArabic ?`مصابيح خلفية LED`: 'LED Rear Lights',
-            featureDescription: isArabic ? `تأتي كيا تاسمان بمصابيح خلفية مزدوجة LED تنتج إضاءة ساطعة وواضحة لرؤية وأمان أفضل. هذه المصابيح تعزز من الشكل العصري للسيارة وتجعلك مرئيًا بوضوح أمام جميع مستخدمي الطريق في شتى الظروف.` : "The Kia Tasman is equipped with distinctive full LED rear combination lamps that provide bright, clear illumination for enhanced visibility and safety. These LED rear lights contribute to the vehicle's modern, confident design while ensuring you are clearly seen by other road users in all conditions."
+            featureDescription: isArabic ? `تأتي كيا سبورتاج بمصابيح خلفية مزدوجة LED تنتج إضاءة ساطعة وواضحة لرؤية وأمان أفضل. هذه المصابيح تعزز من الشكل العصري للسيارة وتجعلك مرئيًا بوضوح أمام جميع مستخدمي الطريق في شتى الظروف.` : "The Kia sportage is equipped with distinctive full LED rear combination lamps that provide bright, clear illumination for enhanced visibility and safety. These LED rear lights contribute to the vehicle's modern, confident design while ensuring you are clearly seen by other road users in all conditions."
         },
         {
             image: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/275d62e7-19c7-41b1-eb22-f88ea4a7ab00/public',
@@ -50,7 +50,7 @@ const isArabic=i18n?.language=='ar'
         {
             image: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/c92d72f0-d329-4ff2-e090-fc98f0bafd00/public',
             featureTitle: isArabic ?`درع حماية سفلي`: 'Underbody Skid Plate',
-            featureDescription: isArabic ? `لحماية أثناء مغامرات الطرق الوعرة، تأتي تاسمان مزودة بدرع حماية سفلي صُلب يحمي الهيكل السفلي من الصخور والرواسب، ليحافظ على سلامة المكونات المهمة ويُعزّز صلابة المركبة واستعدادها لأقسى البيئات.` : "For serious off-road protection, the Tasman comes with underbody skid plates. These robust plates shield the vehicle's undercarriage from rocks, debris, and rough terrain, helping to maintain critical component integrity when venturing off the beaten path. This feature reinforces the Tasman's ruggedness and readiness for demanding environments.."
+            featureDescription: isArabic ? `لحماية أثناء مغامرات الطرق الوعرة، تأتي سبورتاج مزودة بدرع حماية سفلي صُلب يحمي الهيكل السفلي من الصخور والرواسب، ليحافظ على سلامة المكونات المهمة ويُعزّز صلابة المركبة واستعدادها لأقسى البيئات.` : "For serious off-road protection, the sportage comes with underbody skid plates. These robust plates shield the vehicle's undercarriage from rocks, debris, and rough terrain, helping to maintain critical component integrity when venturing off the beaten path. This feature reinforces the sportage's ruggedness and readiness for demanding environments.."
         }
     ];
    
@@ -116,7 +116,7 @@ const isArabic=i18n?.language=='ar'
         {
             image: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/bf199f41-1282-40b3-17e6-260397980800/public',
             featureTitle: isArabic ?`قدرة اجتياز المياه`: 'Wading',
-            featureDescription: isArabic ? `مصممة لتخطي أصعب التضاريس وعبور المياه بقدرة غمر تصل إلى 800 مم بسرعة أقل من 7 كم/س. مع مدخل هواء عالي داخل الرفرف الأمامي لمنع تسرب الماء، وتوصيلات كهربائية مقاومة للماء لضمان القوة والاعتمادية في مغامراتك.` : "Designed to tackle challenging terrain and water crossings, the Kia Tasman offers a confident wading capability of up to 800mm depth at speeds under 7 km/h. The engineering includes a high air intake positioned inside the front fender to prevent water ingress, along with waterproof connectors for critical components, ensuring durability and reliability during off-road adventures."
+            featureDescription: isArabic ? `مصممة لتخطي أصعب التضاريس وعبور المياه بقدرة غمر تصل إلى 800 مم بسرعة أقل من 7 كم/س. مع مدخل هواء عالي داخل الرفرف الأمامي لمنع تسرب الماء، وتوصيلات كهربائية مقاومة للماء لضمان القوة والاعتمادية في مغامراتك.` : "Designed to tackle challenging terrain and water crossings, the Kia sportage offers a confident wading capability of up to 800mm depth at speeds under 7 km/h. The engineering includes a high air intake positioned inside the front fender to prevent water ingress, along with waterproof connectors for critical components, ensuring durability and reliability during off-road adventures."
         },
         {
             image: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/87dcae85-2e22-40e0-abc9-eafceb0e2500/public',
@@ -136,7 +136,7 @@ const isArabic=i18n?.language=='ar'
             featureTitle: isArabic ?`نظام مراقبة الأرض (GVM)`: 'Ground View Monitor (GVM)',
             featureDescription: isArabic ?`احصل على رؤية كاملة لما يختبئ أسفل وأمام سيارتك. نظام GVM يُساعدك على عبور المسارات الضيقة والمناطق الصخرية بكل ثقة.
 
-*قد تختلف توفر صفحة الطرق الوعرة (واجهة المستخدم) ونظام مراقبة الأرض حسب المنطقة وتكوين السيارة.*`: 'Get a clear view of what’s directly beneath and in front of your Tasman. The Ground View Monitor helps you navigate tight trails, rocky paths, and tricky terrain with confidence.',
+*قد تختلف توفر صفحة الطرق الوعرة (واجهة المستخدم) ونظام مراقبة الأرض حسب المنطقة وتكوين السيارة.*`: 'Get a clear view of what’s directly beneath and in front of your sportage. The Ground View Monitor helps you navigate tight trails, rocky paths, and tricky terrain with confidence.',
         
          dis: isArabic ? `
 توفر صفحة الطرق الوعرة (واجهة الطرق الوعرة) ونظام عرض الرؤية الأرضية يعتمد على الاختلافات الإقليمية وتجهيزات المركبة المحددة.`: 'The availability of the Off-Road Page (Off-Road GUI) and Ground View Monitor is subject to regional differences and specific vehicle configurations.'
@@ -146,7 +146,7 @@ const isArabic=i18n?.language=='ar'
         {
             image: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/51850fdf-eb13-4bed-37e0-44e865cb9e00/public',
             featureTitle: isArabic ?`قفل تفاضلي إلكتروني (ELD)`: 'Electronic Locking Differential (ELD)',
-            featureDescription: isArabic ?`مع نظام قفل تفاضلي إلكتروني وتوزيع عزم مُعدل للطرق الوعرة، تخوض تاسمان الرمال والطين والأخاديد بثبات.`: 'With an electronic differential lock and off-road-tuned torque delivery, the Tasman pushes through sand, mud, and ruts with confidence.'
+            featureDescription: isArabic ? `مع نظام قفل تفاضلي إلكتروني وتوزيع عزم مُعدل للطرق الوعرة، تخوض سبورتاج الرمال والطين والأخاديد بثبات.` : 'With an electronic differential lock and off-road-tuned torque delivery, the sportage pushes through sand, mud, and ruts with confidence.'
         },
         {
             image: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/e61fd259-8f73-439e-2823-2ba47d01e200/public',
@@ -169,7 +169,7 @@ const isArabic=i18n?.language=='ar'
         {
             video: '/assets/videos/ktk-scc.webm',
             featureTitle: isArabic ?`نظام تثبيت السرعة الذكي (SCC)`: 'Smart Cruise Control (SCC)',
-            featureDescription: isArabic ?`يساعدك في الحفاظ على مسافة آمنة من السيارة التي أمامك بالسرعة التي تحددها. ستتوقف سيارتك EV5 تلقائياً في حال توقفت السيارة التي أمامك فجأة، ثم تستأنف سيرها. أما إذا توقفت السيارة لمدة أطول، فيمكنك عندها متابعة السير من خلال الضغط على دواسة الوقود أو مفتاح +/-.`: 'SCC helps you drive at a preset speed while maintaining a safe distance from the vehicle ahead. It automatically brings the Tasman to a stop then proceeds again when the vehicle ahead accelerates. If the stop is extended, you may need to press the accelerator pedal. When activated, SCC drives automatically, reflecting the learned driving style.'
+            featureDescription: isArabic ? `يساعدك في الحفاظ على مسافة آمنة من السيارة التي أمامك بالسرعة التي تحددها. ستتوقف سيارتك EV5 تلقائياً في حال توقفت السيارة التي أمامك فجأة، ثم تستأنف سيرها. أما إذا توقفت السيارة لمدة أطول، فيمكنك عندها متابعة السير من خلال الضغط على دواسة الوقود أو مفتاح +/-.` : 'SCC helps you drive at a preset speed while maintaining a safe distance from the vehicle ahead. It automatically brings the sportage to a stop then proceeds again when the vehicle ahead accelerates. If the stop is extended, you may need to press the accelerator pedal. When activated, SCC drives automatically, reflecting the learned driving style.'
         },
         {
             video: '/assets/videos/ktk-rspa.webm',
