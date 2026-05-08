@@ -32,8 +32,9 @@ const HOTSPOTS = [
 ];
 
 export default function DimensionsHotspots () {
-    const { i18n } = useTranslation('common');
+    const { i18n ,t} = useTranslation('common');
     const isAr = i18n.language === 'ar';
+
 
     return (
         <section
@@ -55,14 +56,14 @@ export default function DimensionsHotspots () {
                     className="text-xs tracking-[0.3em] uppercase text-white/70 font-[InterBold] "
                     style={{ fontFamily: isAr ? 'GSSMedium' : 'InterBold' }}
                 >
-                    {isAr ? 'أبعاد السيارة' : 'VEHICLE DIMENSIONS'}
+                    {t('vehicleDimensions')}
                 </p>
 
                 <h2
                     className="text-4xl md:text-3xl font-[InterBold]  text-white mt-4"
                     style={{ fontFamily: isAr ? 'GSSBold' : 'InterBold' }}
                 >
-                    {isAr ? 'مصممة لتناسب حياتك' : 'Designed to Fit Your Life'}
+                    {t('dimTitle')}
                 </h2>
 
                 <div className="relative h-[350px] w-[850px] select-none overflow-hidden mt-10">

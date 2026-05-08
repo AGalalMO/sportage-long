@@ -12,7 +12,7 @@ const ParallaxSectionSecond = () => {
     const [isInView, setIsInView] = useState(false);
     const textRef = useRef(null);
     const sectionRef = useRef(null);
-    const { i18n } = useTranslation()
+    const { i18n, t } = useTranslation()
     const { locale } = useRouter()      
 
     const { scrollYProgress } = useScroll({
@@ -20,7 +20,6 @@ const ParallaxSectionSecond = () => {
         offset: ["start end", "end start"]
     });
 
-    const xTransform = useTransform(scrollYProgress, [0, 1], [-window.innerWidth, window.innerWidth]);
 
     const handleScroll = () => {
         const currentScroll = window.scrollY;
@@ -130,10 +129,8 @@ const ParallaxSectionSecond = () => {
 
                         }}
                     >
-                        <p style={{ color: 'white', fontSize: '1rem', lineHeight: '1.7', maxWidth: '420px', fontFamily: locale === 'ar' ? 'GSSLight' : 'InterRegular' }}>
-                            {locale === 'ar'
-                                ? 'لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسينج إيليت. أوت إيليت تيلوس، لوكتوس نيك أولامكوربير ماتيس، بولفينار دابيبوس ليو.'
-                                : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.'}
+                        <p style={{ color: 'white', fontSize: '1rem', lineHeight: '1.7', maxWidth: '420px', fontFamily: locale === 'ar' ? 'GSSLight' : 'InterRegular',paddingTop:'30px' }}>
+                            {t('closingText')}
                         </p>
                     </div>
 

@@ -2,112 +2,42 @@ import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { useTranslation } from 'next-i18next';
 
-const FEATURES = {
-    en: [
-        {
-            title: 'Forward Collision-Avoidance Assist (FCA)',
-            description:
-                'Warns if the preceding vehicle suddenly slows down or if the risk of collision with a vehicle, a pedestrian, or a cyclist is detected. Automatically assists with braking if the risk of a collision increases after warning.',
-        },
-        {
-            title: 'Lane Keeping Assist (LKA)',
-            description:
-                'Detects lane markings and helps keep the vehicle within its lane by providing steering torque when unintended lane departure is detected.',
-        },
-        {
-            title: 'Blind-Spot Collision Warning (BCW)',
-            description:
-                'Monitors the blind spots on both sides of the vehicle and alerts the driver with a visual warning when another vehicle is detected in the blind-spot zone.',
-        },
-        {
-            title: 'Driver Attention Warning (DAW)',
-            description:
-                'Monitors driving patterns and alerts the driver when signs of drowsiness or inattention are detected, helping prevent fatigue-related incidents.',
-        },
-    ],
-    ar: [
-        {
-            title: 'مساعد تجنب الاصطدام الأمامي (FCA)',
-            description:
-                'يحذر عند انخفاض سرعة السيارة الأمامية فجأة أو عند اكتشاف خطر الاصطدام بسيارة أو راجل أو دراجة. يتدخل تلقائياً بالفرملة عند ازدياد خطر الاصطدام.',
-        },
-        {
-            title: 'مساعد الحفاظ على المسار (LKA)',
-            description:
-                'يرصد علامات المسار ويساعد على إبقاء المركبة ضمن مسارها من خلال تطبيق عزم توجيه عند اكتشاف انحراف غير مقصود.',
-        },
-        {
-            title: 'تحذير اصطدام النقطة العمياء (BCW)',
-            description:
-                'يراقب النقاط العمياء على جانبي المركبة وينبّه السائق بصرياً عند اكتشاف مركبة أخرى في المنطقة غير المرئية.',
-        },
-        {
-            title: 'تحذير انتباه السائق (DAW)',
-            description:
-                'يرصد أنماط القيادة وينبّه السائق عند ظهور علامات النعاس أو الشرود، مما يساعد في منع الحوادث الناجمة عن الإرهاق.',
-        },
-    ],
-};
-
-const SLIDER_ITEMS = {
-    en: [
-        {
-            image: '/assets/stills/headlights.jpeg',
-            title: 'LED Adaptive Headlights',
-            description: 'High-performance adaptive lighting system that illuminates curves and corners for enhanced visibility.',
-        },
-        {
-            image: '/assets/stills/EXT Cam 3 Rear lights.jpeg',
-            title: 'Sequential Rear Lights',
-            description: 'Bold sequential LED rear lighting signature that sets the Sportage apart after dark.',
-        },
-        {
-            image: '/assets/stills/EXT Cam 4 Rim.jpeg',
-            title: '19" Alloy Wheels',
-            description: 'Aerodynamically optimised alloy wheels that reduce drag while adding a premium stance.',
-        },
-        {
-            image: '/assets/stills/IN Cam 3 curved display.jpeg',
-            title: 'Curved Panoramic Display',
-            description: 'A seamlessly integrated digital display panel keeping information within your field of view.',
-        },
-    ],
-    ar: [
-        {
-            image: '/assets/stills/headlights.jpeg',
-            title: 'مصابيح LED أمامية تكيفية',
-            description: 'نظام إضاءة تكيفي عالي الأداء يضيء المنعطفات لرؤية أوضح.',
-        },
-        {
-            image: '/assets/stills/EXT Cam 3 Rear lights.jpeg',
-            title: 'المصابيح الخلفية المتسلسلة',
-            description: 'توقيع LED خلفي متسلسل جريء يميز سبورتاج في الليل.',
-        },
-        {
-            image: '/assets/stills/EXT Cam 4 Rim.jpeg',
-            title: 'جنوط سبائك 19 بوصة',
-            description: 'جنوط سبائك محسّنة ديناميكياً تقلل من السحب وتمنح المركبة طابعاً فارهاً.',
-        },
-        {
-            image: '/assets/stills/IN Cam 3 curved display.jpeg',
-            title: 'شاشة بانورامية منحنية',
-            description: 'شاشة رقمية متكاملة تبقي المعلومات ضمن مجال رؤية السائق.',
-        },
-    ],
-};
 
 export default function DriveWiseSection () {
-    const { i18n } = useTranslation('common');
+    const { i18n,t } = useTranslation('common');
     const isAr = i18n.language === 'ar';
     const sectionRef = useRef(null);
     const isSectionInView = useInView(sectionRef, { amount: 0.8 });
-
-    const [featureIndex, setFeatureIndex] = useState(0);
     const [sliderIndex, setSliderIndex] = useState(0);
 
-    const features = isAr ? FEATURES.ar : FEATURES.en;
-    const slides = isAr ? SLIDER_ITEMS.ar : SLIDER_ITEMS.en;
-    const currentFeature = features[featureIndex];
+    const slides = [
+        {
+            image: '/assets/safety/aeb.png',
+            title: t('driveWise.smartCruiseControl.title'),
+            description: t('driveWise.smartCruiseControl.description'),
+        },
+        {
+            image: '/assets/safety/kia-digital-key.png',
+            title: t('driveWise.digitalKey.title'),
+            description: t('driveWise.digitalKey.description'),
+        },
+        {
+            image: '/assets/safety/kia-ota.png',
+            title: t('driveWise.connectedServices.title'),
+            description: t('driveWise.connectedServices.description'),
+        },
+        {
+            image: '/assets/safety/lfa.jpg',
+            title: t('driveWise.laneFollowing.title'),
+            description: t('driveWise.laneFollowing.description'),
+        },
+        {
+            image: '/assets/safety/parking-sensor.png',
+            title: t('driveWise.parkingCollision.title'),
+            description: t('driveWise.parkingCollision.description'),
+        },
+    ]
+
 
     return (
         <section
@@ -132,13 +62,13 @@ export default function DriveWiseSection () {
                             className="mb-1 text-lg text-white"
                             style={{ fontFamily: isAr ? 'GSSLight' : 'InterLight' }}
                         >
-                            {isAr ? 'قيادة ذكية' : 'Drive Wise'}
+                            {t('driveWise.title')}
                         </p>
                         <h2
                             className="mb-4 text-3xl text-white lg:text-4xl"
                             style={{ fontFamily: isAr ? 'GSSBold' : 'InterBold' }}
                         >
-                            {isAr ? 'طريقة أذكى للقيادة' : 'A smarter way to drive'}
+                            {t('driveWise.tagline')}
                         </h2>
                         <div className="h-px w-32 bg-white/25" />
                     </motion.div>
@@ -155,16 +85,16 @@ export default function DriveWiseSection () {
                     </div>
 
                     <h3
-                        className="mb-3 text-2xl text-white lg:text-[34px]"
+                        className="mb-3 text-2xl text-white lg:text-[30px]"
                         style={{ fontFamily: isAr ? 'GSSBold' : 'InterBold' }}
                     >
-                        {currentFeature.title}
+                        {t(`driveWise.forwardCollision.title`)}
                     </h3>
                     <p
                         className="text-sm leading-7 text-white/65 lg:text-base"
                         style={{ fontFamily: isAr ? 'GSSLight' : 'InterRegular' }}
                     >
-                        {currentFeature.description}
+                        {t(`driveWise.forwardCollision.description`)}
                     </p>
                 </div>
 

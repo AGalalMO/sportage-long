@@ -3,6 +3,7 @@ import { useRef, useState, useLayoutEffect, useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 gsap.registerPlugin(ScrollTrigger);
 
 const ScrollSequence = ({ id, imagesUrl, totalFrames, heroData, isHero = false }) => {
@@ -22,29 +23,34 @@ const ScrollSequence = ({ id, imagesUrl, totalFrames, heroData, isHero = false }
   const injectedSlideIndexRef = useRef(null);
   const tailImagesRef = useRef([]);
   const previousFrameRef = useRef(-1);
-
+  const { t } = useTranslation('common')
   const isHeroSequence = isHero;
 
   const HERO_SLIDES = [
     {
       image: imagesUrl?.[imagesUrl.length - 1] || '/assets/stills/headlights.jpeg',
-      title: 'Star-map Signature Lighting',
-      description: "Kia's new family Star-map signature lighting look complete the futuristic front image.",
+      title: t('exterior.starMapLighting.title'),
+      description: t("exterior.starMapLighting.description"),
     },
     {
       image: '/assets/stills/headlights.jpeg',
-      title: 'Bold Aerodynamics',
-      description: 'Sleek lines and a dynamic profile built to cut through the city wind.',
+      title: t('exterior.ledHeadlights.title'),
+      description: t("exterior.ledHeadlights.description"),
     },
     {
       image: '/assets/stills/EXT Cam 3 Rear lights.jpeg',
-      title: 'Commanding Stance',
-      description: 'Distinctive wheel arches and alloy wheels that make a lasting impression.',
+      title: t('exterior.ledTaillights.title'),
+      description: t("exterior.ledTaillights.description"),
+    },
+    {
+      image: '/assets/stills/headlights.jpeg',
+      title: t('exterior.welcomeLight.title'),
+      description: t("exterior.welcomeLight.description"),
     },
     {
       image: '/assets/stills/EXT Cam 4 Rim.jpeg',
-      title: 'Commanding Stance',
-      description: 'Distinctive wheel arches and alloy wheels that make a lasting impression.',
+      title: t('exterior.alloyWheels.title'),
+      description: t("exterior.alloyWheels.description"),
     },
    
    
@@ -447,7 +453,7 @@ const ScrollSequence = ({ id, imagesUrl, totalFrames, heroData, isHero = false }
                   initial="initial"
                   animate="animate"
                   exit="exit"
-                  className="pointer-events-none absolute bottom-14 left-6 z-[40] max-w-[480px] md:left-10 md:bottom-16"
+                  className="pointer-events-none absolute bottom-14 left-6 z-[40]  md:left-10 md:bottom-16"
                   style={{ transformOrigin: 'bottom center' }}
                 >
                   <motion.h3 variants={tailCaptionTitleVariants} className="text-white text-3xl leading-4   mb-4 text-shadow-md font-[InterBold]" >

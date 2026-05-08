@@ -22,7 +22,6 @@ const VRShowroom = ({ showControl = false }) => {
   const [colorTextKey, setColorTextKey] = useState(0);
   const { t, i18n } = useTranslation('common');
   const { locale } = useRouter();
-
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['start end', 'end start'],
@@ -38,16 +37,16 @@ const VRShowroom = ({ showControl = false }) => {
     ['/assets/colors/auban_gray_matt.jpeg'],
     ['/assets/colors/urban_gray.jpeg'],
     ['/assets/colors/wolf_gray.jpeg'],
-    ['/assets/colors/yacht_blur.jpeg']]
+    ['/assets/colors/junglewood.jpeg']]
 
   const COLORS = [
-    { id: 'white', name: 'Snow White Pearl', hex: '#F0EEE9', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/4952bc85-a2df-46ab-081d-d25f6177ce00/public' },
-    { id: 'blue', name: 'Yacht Blue', hex: '#2E4B72', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/a8f7b28b-ff09-42b2-b0ab-3eccbed81500/public' },
-    { id: 'black', name: 'Aurora Black Pearl', hex: '#1A1A1A', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/b969f132-bf2b-4e32-1373-f54363d4ed00/public' },
-    { id: 'matt', name: 'Urban Gray Matte', hex: '#7A7D7F', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/15311daf-6c93-409c-f457-e8c1867d7600/public' },
-    { id: 'urban', name: 'Urban Gray', hex: '#9298A0', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/08342870-b29c-4b1c-8e32-796b0139d200/public' },
-    { id: 'wolf', name: 'Wolf Gray', hex: '#4A4D50', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/2ec05ee8-5a4d-4bcd-0aa7-1d0308c8e300/public' },
-    { id: 'wood', name: 'Jungle Wood Green', hex: '#3D4B38', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/ad847c7a-3269-443f-42f4-db56d986c600/public' },
+    { id: 'white', name: t('colors.snowWhitePearl'), hex: '#F0EEE9', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/4952bc85-a2df-46ab-081d-d25f6177ce00/public' },
+    { id: 'blue', name: t('colors.yachtBlue'), hex: '#2E4B72', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/a8f7b28b-ff09-42b2-b0ab-3eccbed81500/public' },
+    { id: 'black', name: t('colors.auroraBlackPearl'), hex: '#1A1A1A', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/b969f132-bf2b-4e32-1373-f54363d4ed00/public' },
+    { id: 'matt', name: t('colors.aubanGrayMatte'), hex: '#7A7D7F', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/15311daf-6c93-409c-f457-e8c1867d7600/public' },
+    { id: 'urban', name: t('colors.urbanGray'), hex: '#9298A0', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/08342870-b29c-4b1c-8e32-796b0139d200/public' },
+    { id: 'wolf', name: t('colors.wolfGray'), hex: '#4A4D50', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/2ec05ee8-5a4d-4bcd-0aa7-1d0308c8e300/public' },
+    { id: 'wood', name: t('colors.jungleWoodGreen'), hex: '#3D4B38', chip: 'https://imagedelivery.net/2Dh6erMZ0IA4Y2r-mRikDg/ad847c7a-3269-443f-42f4-db56d986c600/public' },
   ];
 
   const preloadColorImages = async colorId => {
@@ -233,12 +232,12 @@ const VRShowroom = ({ showControl = false }) => {
       >
         {/* Personalize label */}
         <p className="text-[#A3A8AD]   tracking-widest text-lg font-[InterBold] " >
-          Personalize
+          {t('colors.personalize')}
         </p>
 
         {/* Heading */}
         <h3 className="text-white font-[InterBold] text-xl">
-          Choose Your Color
+          {t('colors.chooseColor')}
         </h3>
 
         {/* Color swatches */}

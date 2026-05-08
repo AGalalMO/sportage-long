@@ -2,72 +2,47 @@ import { useMemo, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'next-i18next';
 
-const SLIDES = {
-    en: [
-        {
-            image: '/assets/stills/IN Cam 3 curved display.jpeg',
-            title: 'Dual Curved Display',
-            description:
-                '12.3-inch dual panoramic curved screens with an intuitive interface, wireless Apple CarPlay & Android Auto, and real-time navigation.',
-        },
-        {
-            image: '/assets/stills/IN Cam 4 steering wheel.jpeg',
-            title: 'Premium Leather Seats',
-            description:
-                'Ventilated and heated Nappa leather seats with 10-way power adjustment, memory function, and ergonomic lumbar support.',
-        },
-        {
-            image: '/assets/stills/IN Cam 5 sunroof E.jpg',
-            title: 'PANORAMIC SUNROOF',
-            description:
-                'Full-length panoramic glass roof with electrochromic dimming, flooding the cabin with natural light while maintaining UV protection.',
-        },
-        {
-            image: '/assets/stills/INT-Speaker.jpg',
-            title: 'Harman Kardon Audio',
-            description:
-                'Premium 14-speaker Harman Kardon sound system with Clari-Fi™ technology, delivering immersive 3D surround sound throughout the cabin.',
-        },
-    ],
-    ar: [
-        {
-            image: '/assets/stills/IN Cam 3 curved display.jpeg',
-            title: 'شاشة بانورامية منحنية',
-            description:
-                'تصميم رقمي متكامل يعرض معلومات القيادة والترفيه بوضوح ضمن مجال رؤية السائق.',
-        },
-        {
-            image: '/assets/stills/INT-Speaker.jpg',
-            title: 'نظام صوت Harman Kardon',
-            description:
-                'توزيع ذكي للسماعات وضبط دقيق للصوت يمنح تجربة استماع غامرة لجميع الركاب.',
-        },
-        {
-            image: '/assets/stills/IN Cam 5 sunroof E.jpg',
-            title: 'سقف بانورامي',
-            description:
-                'سقف زجاجي بانورامي بطول المقصورة مع تعتيم إلكتروني يمنحك إضاءة طبيعية وحماية من الأشعة فوق البنفسجية.',
-        },
-        {
-            image: '/assets/stills/IN Cam 4 steering wheel.jpeg',
-            title: 'قمرة قيادة فاخرة',
-            description:
-                'تموضع مثالي لعناصر التحكم لقيادة أكثر راحة وثقة ضمن تصميم داخلي حديث.',
-        },
-    ],
-};
+
 
 export default function InteriorFeatureSlider () {
-    const { i18n } = useTranslation('common');
+    const { t,i18n } = useTranslation('common');
     const isArabic = i18n?.language === 'ar';
-    const [index, setIndex] = useState(2);
+    const [index, setIndex] = useState(0);
 
-    const slides = useMemo(() => (isArabic ? SLIDES.ar : SLIDES.en), [isArabic]);
-    const current = slides[index];
-    const total = slides.length;
+    const slides = [
+        {
+            image: '/assets/stills/IN Cam 3 curved display.jpeg',
+            title: t('interior.panoramicDisplay.title'),
+            description: t('interior.panoramicDisplay.description'),
+        },
+        {
+            image: '/assets/stills/IN Cam 4 steering wheel.jpeg',
+            title: t('interior.steeringWheel.title'),
+            description: t('interior.steeringWheel.description'),
+        },
+        {
+            image: '/assets/stills/IN Cam 2 ambient light.jpeg',
+            title: t('interior.ambientLighting.title'),
+            description: t('interior.ambientLighting.description'),
+        },
+        {
+            image: '/assets/stills/INT-Speaker.jpg',
+            title: t('interior.harmanKardon.title'),
+            description: t('interior.harmanKardon.description'),
+        },
+        {
+            image: '/assets/stills/IN Cam 5 sunroof E.jpg',
+            title: t('interior.panoramicSunroof.title'),
+            description: t('interior.panoramicSunroof.description'),
+        },
+
+    ]
 
     const goNext = () => setIndex((prev) => (prev + 1) % total);
     const goPrev = () => setIndex((prev) => (prev - 1 + total) % total);
+    const current = slides[index];
+    const total = slides.length;
+    
 
     return (
         <section id="interior-slider" className="relative w-screen h-screen overflow-hidden flex items-center justify-center  py-16 lg:py-24">
@@ -85,7 +60,7 @@ export default function InteriorFeatureSlider () {
                     className={`text-4xl md:text-5xl font-bold text-white mt-4  font-sans mb-16 '
                         }`}
                 >
-                    {isArabic ? 'مصممة لأقصى درجات الراحة' : 'Crafted for Comfort'}
+                    {t('interior.taglineHead')}
                 </h2>
 
                 <div className="relative flex w-full items-center justify-center">
@@ -107,16 +82,16 @@ export default function InteriorFeatureSlider () {
                         />
                     </div>
 
-                    <div className="relative z-10 flex w-full max-w-[980px] flex-col overflow-hidden rounded-2xl border border-white/10 bg-[rgba(255, 255, 255, 0.03)] lg:min-h-[410px] lg:flex-row"
+                    <div className="relative z-10 flex w-full max-w-[980px] flex-col overflow-hidden rounded-2xl border border-white/10 bg-[rgba(255, 255, 255, 0.03)] lg:min-h-[450px] lg:flex-row"
                         style={{
                             backdropFilter:'blur(10px)'
                     }}
                     >
-                        <div className="h-[260px] w-full lg:h-auto lg:w-[64%]">
-                            <img src={current.image} alt={current.title} className="h-full w-full object-cover" loading="lazy" />
+                        <div className="h-[260px] w-full lg:h-auto lg:w-[60%]">
+                            <img src={current.image} alt={current.title} className="h-full w-full object-cover " loading="lazy" />
                         </div>
 
-                        <div className="flex w-full flex-col ps-5 pb-5 pt-4 text-white lg:w-[36%] lg:ps-6 lg:pb-6 lg:pt-5">
+                        <div className="flex w-full flex-col ps-5 pb-5 pt-4 text-white lg:w-[39%] lg:ps-6 lg:pb-6 lg:pt-5 ">
                             <div className="mb-4 flex items-center justify-between  pb-3">
                                 <p className={`text-5xl text-white/30 ${isArabic ? "font-['GSSMedium']" : 'font-[InterBold]'}`}>
                                     {String(index + 1).padStart(2, '0')}
@@ -124,12 +99,12 @@ export default function InteriorFeatureSlider () {
                                 <hr className='border   ms-4 w-full border-white/30'/>
                             </div>
 
-                            <h3 className={`text-3xl font-bold text-white leading-tight font-sans`}>
+                            <h3 className={`text-3xl font-bold text-white leading-tight font-sans pe-5`}>
                                 {current.title}
                             </h3>
 
                             <p
-                                className={`text-white/80   text-sm font-sans leading-5 mt-2`}
+                                className={`text-white/80   text-sm font-sans leading-5 mt-2 pb-3`}
                                
                                 dir={isArabic ? 'rtl' : 'ltr'}
                             >

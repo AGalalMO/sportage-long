@@ -1,444 +1,137 @@
 {
-  "title": "Welcome to Next.js!",
-  "description": "Get started by editing",
-  "documentation": "Documentation",
-  "documentation_description": "Find in-depth information about Next.js features and API.",
-  "learn": "Learn",
-  "learn_description": "Learn about Next.js in an interactive course with quizzes!",
-  "examples": "Examples",
-  "examples_description": "Discover and deploy boilerplate example Next.js projects.",
-  "deploy": "Deploy",
-  "deploy_description": "Instantly deploy your Next.js site to a public URL with Vercel.",
-  "powered_by": "Powered by",
-  "loading": "Loading 360° View...",
-  "drag_to_rotate": "← Drag to rotate →",
-  "exterior_color": "Exterior Color",
-  "view": "View",
-  "design": "Design",
-  "Technology": "Technology",
-  "comfortHead": "Comfort",
-  "Styling": "Styling",
-  "specso": "Specifications ",
-  "loading_sequence": "Loading sequence...",
-  "animation_complete": "Animation Complete!",
-  "scroll_naturally": "Now you can scroll naturally.",
-  "color_names_White": "Clear White",
-  "color_names_Haze": "Morning Haze",
-  "color_names_black": "Phantom Black",
-  "frame_alt": "360° View Frame {{number}}",
-  "loading_360": "Loading 360° View...",
-  "loading_images": "Loading images...",
-  "sequence_complete": "Sequence Complete",
-  "kia_sportage": "The Kia sportage",
-  "push_beyond_ordinary": "Dive into a New Dimension",
-  "head_turning_design": "Head-turning Design",
-  "led_headlights": "LED Star-map Headlights",
-  "led_headlights_description": "The vehicle is equipped with distinctive LED cube projector headlights and star-map daytime running lights (DRLs). These provide a wide stance and a premium presence, making the sportage stand out both day and night",
-  "led_rear_lamps": "LED Rear Combination Lamps",
-  "led_rear_lamps_description": "Horizontally connected rear lamps wit LED lamps offering improved visibility and a modern aesthetic, complementing the car's futuristic design",
-  "fastback_design": "Fastback Design",
-  "fastback_description": "The sportage features a sleek fastback roofline, which not only enhances aerodynamics but also gives the car a sporty, coupe-like appearance",
+  "loading": "Loading...",
+  "tagline": "Make space for adventure",
+  "dimTitle": "Every Dimension , Perfected.",
+  "vehicleDimensions": "VEHICLE DIMENSIONS",
 
-  "tiger_nose_grille": "Signature Tiger-nose Grille",
-  "tiger_nose_description": "The front grille features a bold interpretation of Kia's signature tiger-nose grille, flanked by sleek LED headlights and chrome garnish for a confident and sophisticated look",
-
-  "hidden_door_handles": "Hidden Rear Outside Door Handles",
-  "hidden_door_handles_description": "Integrated into rear door window, these handles create a coupe-like side profile, adding to the car's sporty sophistication and aerodynamic silhouette",
-
-  "sliding_sunroof": "Wide Out Sliding Sunroof",
-  "sliding_sunroof_description": "Designed to provide an expansive view and an airy driving experience, enhancing the overall ambiance of the cabin by allowing more natural light in",
-
-  "slim_neck_mirror": "Slim-neck Outside Mirror",
-  "slim_neck_description": "Designed to reduce wind resistance and enhance the car's aerodynamic profile, contributing to a sleeker appearance",
-
-  "black_cladding": "Black Cladding",
-  "black_cladding_description": "Adds a sporty touch to the vehicle's exterior, accentuating its dynamic design elements and providing protection against minor impacts",
-
-  "black_bumper": "Black Front Bumper",
-  "black_bumper_description": "Designed to be both stylish and functional incorporating a lattice-shaped black intake grille creating a cohesive front fascia",
-  "viewInterios": "360 View",
-
-  "tech_enthusiasts": "Catering to tech-enthusiasts",
-  "panoramic_display": "Ultra-wide 29.9' inch Panoramic Display",
-  "panoramic_display_description": "Features an integrated system of three screens, providing a seamless and immersive digital experience across the dashboard",
-  "hud_display": "12-inch Head-Up Display (HUD)",
-  "hud_description": "Projects essential information directly onto the windshield, allowing drivers to keep their eyes on the road",
-  "steering_wheel": "Double D-cut Steering Wheel",
-  "steering_wheel_description": "A sporty, multi-function steering wheel that provides easy access to various controls while adding a touch of sophistication to the interior",
-  "controls": "Physical and Digital Controls",
-  "controls_description": "Combines touch buttons functionality with physical buttons for air conditioner, offering intuitive control options for various vehicle functions and safe operations while driving",
-  "carplay": "Wireless Apple CarPlay® and Android Auto™",
-  "carplay_description": "Seamlessly integrates smartphone functionality with the vehicle's infotainment system",
-  "comfort": "A Blend of Comfort and Practicality",
-  "spacious_interior": "Spacious Interior",
-  "interior_description": "The sportage boasts generous front legroom, with class-leading second-row legroom, ensuring passengers have ample space to relax",
-  "heated_ventilated_seats": "Heated & Ventilated Front Seats",
-  "heated_ventilated_description": "Heated and ventilated front seats provide year-round comfort, making the sportage suitable for various climates",
-  "premium_upholstery": "Premium Upholstery",
-  "premium_upholstery_description": "The cabin features premium upholstery and finishes, contributing to a sophisticated and comfortable driving environment",
-  "epb": "Electronic Parking Brake (EPB)",
-  "epb_description": "Replaces the traditional lever with a button for easier parking and more interior space.",
-  "chromic_mirror": "Electronic Chromic Mirror",
-  "chromic_mirror_description": "Automatically darkens to reduce glare from headlights of vehicles behind you, enhancing nighttime driving safety and comfort",
-  "harman_kardon": "Harman / Kardon Sound System",
-  "harman_kardon_description": "Transforms the vehicle into a concert hall with advanced sound tuning and strategically placed speakers, offering an immersive listening experience",
-  "wireless_charging": "Mobile Wireless Charging",
-  "wireless_charging_description": "Keep charging on the go with wireless charging (Qi) available for compatible smartphones.",
-  "usb_ports": "Rear Seat USB Ports and Storage Tray",
-  "usb_ports_description": "Provides passengers with easy access to power outlets and a convenient storage area for personal items, enhancing comfort and practicality",
-  "memory_system": "Driver Position Memory System",
-  "memory_system_description": "this feature allows drivers to save and recall their preferred seat and mirror settings at the touch of a button, ideal for shared vehicles",
-  "safety_tech": "Impressive Array of Safety Technologies",
-  "bca": "Blind-Spot Collision-Avoidance Assist (BCA)",
-  "bca_description": "Detects vehicles in blind spots and can help maintain the vehicle's course if an unsafe lane change is attempted",
-  "bvm": "Blind-Spot View Monitor (BVM)",
-  "bvm_description": "When the turn signal switch is operated, the rear-side image of the corresponding direction is displayed in the cluster",
-  "pca_r": "Reverse Parking Collision-Avoidance Assist (PCA-R)",
-  "pca_r_description": "Warns of collision risks with pedestrians or objects during parking and exiting. Automatically applies emergency braking if the risk increases.",
-  "pdw": "Parking Distance Warning (PDW)",
-  "pdw_description": "Warns of collision risks, assists with emergency braking, and activates Parking Distance Warning for added safety during parking and exiting.",
-  "rvm": "Rear View Monitor (RVM)",
-  "rvm_description": "RVM displays the rear view while driving and parking. Using the rear view camera, shows the rear view and parking guide lines.",
-  "svm": "Surround View Monitor (SVM)",
-  "svm_description": "Displays a 360° view using four cameras, offering multiple modes and a 3D view.",
-  "refined_dynamics": "Refined Dynamics for",
-  "refined_dynamics2": "an Elevated Drive",
-  "paddle_shifters": "Paddle Shifters",
-  "paddle_shifters_description": "Mounted on the Steering Wheel, Allowing Drivers to Manually Shift Gears for a More Engaging Driving Experience",
-  "engine": "GDI 1.6L Turbocharged",
-  "transmission_description": "For Smoother Power Delivery",
-  "engine_specs": "Producing 190 Horsepower",
-  "engine_specs1": "and 195 lb-ft of Torque @ 1,700-4,500 rpm",
-  "transmission": "8-Speed AT Transmission",
-  "power_delivery": "For Smoother Power Delivery",
-  "drive_mode": "Drive Mode Selection",
-  "drive_mode_description": "Allows Drivers to Customize Their Driving Experience Based on Preferences or Road Conditions",
-  "discover": " Discover Kia sportage's Exterior & Interior in 360°",
-  "exterior": "Exterior",
-  "interior": "Interior",
-  "bookNow": "Book Now",
-  "Highlights": "Highlights",
-  "trim": "Trim",
-  "kia_footer": "The Kia sportage is a bold, new movement that adds",
-  "kia_footer2": "a dose of 'extraordinary' to our everyday lives.",
-  "explore": "Explore More",
-  "dimensions": "Dimensions (mm)",
-  "height": "Height",
-  "length": "Length",
-  "width": "Width",
-  "wheelbase": "Wheelbase",
-  "Ground_Clearance": "Ground Clearance",
-  "engineTurbo": "1.6L Turbo",
-  "engineHorsepower": "190 HP",
-  "Transmission": "8-Speed AT",
-  "transmissionSpecs": "Transmission",
-  "driveMode": "Drive Mode",
-  "driveModeSpecs": "Normal, Sport, ECO",
-  "powerDelivery": "29.9 Inch",
-  "powerDeliverySpecs": "Panoramic Screen",
-  "Warranty": "Warranty",
-  "ambient_lighting": "Ambient Lighting",
-  "ambient_lighting_description": "The ambient mood lighting adds an extra touch that feels both soothing and luxurious.",
-  "cupHolder": "Rotary Cup Holder",
-  "cupHolder_description": "The sportage includes a convenient rotary cup holder in the center console, allowing for easy access and adjustment of beverage containers. This thoughtful design keeps drinks secure and within reach.",
-  "sequance_head": "LED Star-map Headlights",
-  "sequance_head_description": "Equipped with LED cube projector headlights and star-map DRLs for a striking appearance day and night.",
-  "sequance_head2": "LED Rear Combination Lamps",
-  "sequance_head2_description": "Horizontally connected rear lamps wit LED lamps offering improved visibility and a modern aesthetic, complementing the car's futuristic design",
-
-  "rims": "18-inch Sport Rims",
-  "beltLine": "Belt-line",
-  "beltLine_description": "The dynamic fastback-style silhouette. Create a sporty image with lowered overall height and beltline.",
-  "rims_description": "Available on select trims, the 18-inch alloy wheels add a sporty touch to the sportage's exterior. Providing a responsive driving feel and complementing the car's dynamic design.",
-  "spec_ext": "Exterior Features",
-  "enginePerformance": "Engine & Performance",
-  "spec_int": "Interior Features",
-  "safetyFeatures": "Safety Features",
-  "Safety": "Safety",
-  "Comfort": "Comfort",
-  "trimSpecs": "Kia sportage Trims Specifications",
-  "notify": "Specifications and features may vary by region and market.",
-  "convenience": "Convenience",
-  "colors": {
-    "wave_blue": "Denim Blue",
-    "fiery_red": "Runway Red",
-    "green": "Cityscape Green",
-    "black": "Aurora Black Pearl",
-    "clear_white": "Clear White",
-    "clear_white_fender": "Clear White / Body Color Fenders",
-    "snow_white_pearl": "Snow White Pearl",
-    "beigeFender": "Tan Beige / Body Color Fenders",
-    "beige": "Tan Beige ",
-    "gray": "Interstellar Gray",
-    "steel_gray": "Steel Gray",
-
-    "onyx_black": "Terracotta Brown / Deep Green"
+  "specs": {
+    "engine": "2.0L Turbo / 236 HP",
+    "transmission": "8-Speed / Shift-by-Wire",
+    "driveMode": "Drive Mode / Multi-Terrain Mode",
+    "warranty": "5-Years Warranty / 150,000 Km WCF"
   },
-  "explore_more": "Explore More",
-  "specTrimsSpecs": {
-    "00": {
-      "exterior_features": {
-        "wheels": "16\" Steel wheels (16\" Alloy wheels optional )",
-        "headlamps": "LED Headlamp + Run. Light+Position lamp",
-        "mud_guard": "Mud Guard",
-        "aero_blades": "Aero Blades"
-      },
-      "interior_features": {
-        "seats": "Cloth Seats",
-        "digital_cluster": "4' Inch Digital Cluster",
-        "central_display": "12' Inch Central Display",
-        "overhead_lamp": "Overhead Console LED Lamp"
-      },
-      "safety_features": {
-        "pdw": "PDW (Parking distance warning: Forward & Reverse)",
-        "rvm": "RVM (Rear View Monitor)",
-        "front_airbags": "Front Airbags",
-        "brake_system": "ABS+ ESC+ HAC+ MCB"
-      },
-      "convenience": {
-        "ac": "Manual AC with rear vents",
-        "auto_light": "Auto Light control",
-        "rear_seat": "axjx rear seat folding",
-        "armrest": "Armrest with cup holder",
-        "head_rest": "Head rest with Up&Down function"
-      }
-    },
-    "01": {
-      "exterior_features": {
-        "wheels": "16\" Alloy wheels",
-        "headlamps": "LED Headlamp + Run. Light+Position lamp",
-        "mud_guard": "Mud Guard",
-        "aero_blades": "Aero Blades"
-      },
-      "interior_features": {
-        "seats": "Cloth Seats",
-        "digital_cluster": "4' Inch Digital Cluster",
-        "central_display": "12' Inch Central Display",
-        "overhead_lamp": "Overhead Console LED Lamp",
-        "smart_key": "Smart Key + Button start"
-      },
-      "safety_features": {
-        "pdw": "PDW (Parking distance warning: Forward & Reverse)",
-        "rvm": "RVM (Rear View Monitor)",
-        "front_airbags": "Front Airbags",
-        "brake_system": "ABS+ ESC+ HAC+ MCB"
-      },
-      "convenience": {
-        "ac": "Manual AC with rear vents",
-        "auto_light": "Auto Light control",
-        "rear_seat": "axjx rear seat folding",
-        "armrest": "Armrest with cup holder",
-        "head_rest": "Head rest with Up&Down function",
-        "steering": "Telescopic Steering Wheel",
-        "mirrors": "Electric Folding mirrors"
-      }
-    },
-    "10": {
-      "exterior": {
-        "steelWheels": "16\" Alloy wheels",
-        "headlamps": "LED Headlamp + Run. Light+Position lamp",
-        "mudGuard": "Mud Guard",
-        "aeroBlades": "Aero Blades"
-      },
-      "interior": {
-        "seats": "Cloth Seats",
-        "digitalCluster": "4' Inch Digital Cluster",
-        "centralDisplay": "12' Inch Central Display",
-        "overheadLamp": "Overhead Console LED Lamp"
-      },
-      "safety": {
-        "pdw": "PDW (Parking distance warning: Forward & Reverse)",
-        "rvm": "RVM (Rear View Monitor)",
-        "frontAirbags": "Front Airbags",
-        "brakeSystem": "ABS+ ESC+ HAC+ MCB"
-      },
-      "convenience": {
-        "ac": "Manual AC with rear vents",
-        "autoLight": "Auto Light control",
-        "rear_seat": "axjx rear seat folding",
-        "armrest": "Armrest with Up&Down function"
-      }
-    },
-    "11": {
-      "exterior": {
-        "alloyWheels": "17\" Alloy wheels",
-        "headlamps": "LED Headlamp + Run. Light+Position lamp",
-        "rearLight": "Rear combi LED light",
-        "sunroof": "Wide opening sunroof",
-        "mudGuard": "Mud Guard",
-        "aeroBlades": "Aero Blades"
-      },
-      "interior": {
-        "seats": "Artificial Leather Seats",
-        "display": "Integrated 4\" digital cluster and 12.3\" central display",
-        "steeringWheel": "Artificial leather steering wheel",
-        "smartKey": "Smart Key + Button start",
-        "overheadLamp": "Overhead console LED lamp"
-      },
-      "safety": {
-        "pdw": "PDW (Parking distance warning: Forward & Reverse)",
-        "rvm": "RVM (Rear View Monitor)",
-        "airbags": "Airbags: Front, Side, Thorax &Curtain",
-        "brakeSystem": "ABS+ ESC+ HAC+ MCB"
-      },
-      "convenience": {
-        "ac": "Manual AC with rear vents",
-        "driverSeat": "Power driver seat with Lumbar support function",
-        "mirrors": "Electric Folding mirrors",
-        "parkingBrake": "EPB Electronic Parking Brake"
-      }
-    },
-    "12": {
-      "exterior_features": {
-        "alloy_wheels": "17\" Alloy wheels",
-        "headlamp": "LED Headlamp + Run. Light+Position lamp",
-        "rear_light": "Rear combi LED light",
-        "sunroof": "Wide opening sunroof",
-        "mud_guard": "Mud Guard",
-        "aero_blades": "Aero Blades"
-      },
-      "interior_features": {
-        "seats": "Artificial Leather Seats",
-        "display": "Double wide 12.3\" digital cluster & central display",
-        "steering": "Artificial leather steering wheel",
-        "smart_key": "Smart Key + Button start",
-        "overhead_lamp": "Overhead console LED lamp",
-        "mood_lamp": "Mood Lamp"
-      },
-      "safety_features": {
-        "pdw": "PDW (Parking distance warning: Forward & Reverse)",
-        "bca": "BCA (Blindspot collision avoidance)",
-        "airbags": "Airbags: Front, Side, Thorax &Curtain",
-        "brake_systems": "ABS+ ESC+ HAC+ MCB",
-        "rvm": "RVM (Rear View Monitor)"
-      },
-      "convenience": {
-        "ac": "Dual Auto A/C",
-        "driver_seat": "Power driver seat with Lumbar support function",
-        "mirrors": "Electric Folding mirrors",
-        "parking_brake": "EPB Electronic Parking Brake",
-        "wireless_charger": "Wireless Charger",
-        "ecm": "ECM (Electronic chromic mirror)"
-      }
-    },
-    "13": {
-      "exterior": {
-        "alloyWheels": "17\" Alloy wheels",
-        "headlamps": "LED Headlamp + Run. Light+Position lamp",
-        "rearLight": "Rear combi LED light",
-        "sunroof": "Wide opening sunroof",
-        "mudGuard": "Mud Guard",
-        "aeroBlades": "Aero Blades"
-      },
-      "interior": {
-        "seats": "Artificial Leather Seats",
-        "display": "Double wide 12.3\" digital cluster & central display",
-        "steeringWheel": "Artificial leather steering wheel",
-        "smartKey": "Smart Key + Button start",
-        "overheadLamp": "Overhead console LED lamp",
-        "moodLamp": "Mood Lamp",
-        "audio": "Harman / Kardon"
-      },
-      "safety": {
-        "pdw": "PDW (Parking Distance Warning: Forward, Side & Reverse)",
-        "svm": "Surround View Monitor 360°",
-        "airbags": "Airbags: Front, Side, Thorax &Curtain",
-        "scc": "SCC (Smart cruise control)",
-        "lfa": "LFA (Lane follow assist)",
-        "lka": "LKA (Lane keeping assist)",
-        "bca": "BCA (Blindspot collision avoidance)",
-        "fca": "FCA (Forward collision assist)",
-        "bvm": "BVM (Blind spot view monitor)",
-        "brakeSystem": "ABS+ ESC+ HAC+ MCB"
-      },
-      "convenience": {
-        "ac": "Dual Auto A/C",
-        "driverSeat": "Power driver seat, ventilated with memory function",
-        "mirrors": "Electric Folding mirrors",
-        "parkingBrake": "EPB Electronic Parking Brake",
-        "wirelessCharger": "Wireless Charger",
-        "ecm": "ECM (Electronic chromic mirror)",
-        "tailgate": "Power opening tailgate"
-      }
-    },
-    "20": {
-      "exterior": {
-        "gtLineDesign": "GT-Line design",
-        "alloyWheels": "18\" Alloy wheels",
-        "headLamp": "LED Head Lamp",
-        "runningLights": "LED Run. Light+Position lamp",
-        "rearLights": "Rear combi LED light",
-        "sunroof": "Wide opening sunroof",
-        "mudGuard": "Mud Guard",
-        "aeroBlades": "Aero Blades"
-      },
-      "interior": {
-        "seats": "GT-Line design artificial Leather Seats",
-        "display": "Double wide 12.3\" digital cluster & central display",
-        "steeringWheel": "Two-Tone artificial leather sporty steering wheel",
-        "smartKey": "Smart Key + Button start",
-        "moodLamp": "Mood Lamp"
-      },
-      "safety": {
-        "parkingWarning": "PDW (Parking distance warning: Forward & Reverse)",
-        "airbags": "Airbags: Front, Side, Thorax &Curtain",
-        "brakingSystem": "ABS+ ESC+ HAC+ MCB",
-        "bca": "BCA (Blindspot collision avoidance)",
-        "rvm": "Rear View Monitor (RVM)"
-      },
-      "convenience": {
-        "ac": "Dual Auto A/C",
-        "driverSeat": "Power driver seat with Lumbar support function",
-        "mirrors": "Electric Folding mirrors",
-        "parkingBrake": "EPB Electronic Parking Brake",
-        "wirelessCharger": "Wireless Charger",
-        "chromicMirror": "ECM (Electronic chromic mirror)",
-        "tailgate": "Power opening tailgate"
-      }
-    },
-    "21": {
-      "exterior": {
-        "gtLineDesign": "GT-Line design",
-        "alloyWheels": "18\" Alloy wheels",
-        "ledHeadLamp": "LED Head Lamp Small Cube Projection",
-        "ledRunLight": "LED Run. Light+Position lamp",
-        "rearCombiLight": "Rear combi LED light",
-        "sunroof": "Wide opening sunroof",
-        "mudGuard": "Mud Guard",
-        "aeroBlades": "Aero Blades"
-      },
-      "interior": {
-        "leatherSeats": "GT-Line design artificial Leather Seats",
-        "digitalCluster": "Double wide 12.3\" digital cluster & central display",
-        "steeringWheel": "Two-Tone artificial leather sporty steering wheel",
-        "smartKey": "Smart Key + Button start",
-        "moodLamp": "Mood Lamp",
-        "harmanKardon": "Harman / Kardon",
-        "overheadLamp": "Overhead console LED lamp",
-        "paddleShifters": "Paddle Shifters"
-      },
-      "safety": {
-        "pdw": "PDW (Parking Distance Warning: Forward &Side&Rear)",
-        "svm": "Surround View Monitor 360",
-        "airbags": "Airbags: Front, Side, Thorax &Curtain",
-        "scc": "SCC (Smart cruise control)",
-        "lfa": "LFA (Lane follow assist)",
-        "lka": "LKA (Lane keeping assist)",
 
-        "bca": "BCA (Blindspot collision avoidance)",
-        "fca": "FCA2 (Forward collision assist)",
-        "bvm": "BVM (Blind spot view monitor)",
-        "brakeSystem": "ABS+ ESC+ HAC+ MCB"
-      },
-      "convenience": {
-        "ac": "Dual Auto A/C",
-        "driverSeat": "Power driver seat, ventilated with memory function",
-        "mirrors": "Electric Folding mirrors",
-        "parkingBrake": "EPB Electronic Parking Brake",
-        "wirelessCharger": "Wireless Charger",
-        "chromicMirror": "ECM (Electronic chromic mirror)",
-        "tailgate": "Power opening tailgate"
-      }
+  "exterior": {
+    "name": "Exterior",
+    "starMapLighting": {
+      "title": "Star-map Signature Lighting",
+      "description": "The striking new bumper and grille bring a strong dose of emotion and confidence to the design, seamlessly connecting with the signature Star Map daytime running lights for an even more impressive overall impression."
+    },
+    "ledHeadlights": {
+      "title": "Vertically Shaped LED Headlights",
+      "description": "Illuminate the path ahead with distinct style. The striking vertically shaped LED headlights not only provide superior nighttime visibility but also give the Sportage a bold, futuristic signature look that stands out."
+    },
+    "ledTaillights": {
+      "title": "LED Taillights with Star-map",
+      "description": "The rear combination lamps with new graphics and the characteristic Star Map design immediately attract attention."
+    },
+    "welcomeLight": {
+      "title": "Dynamic Welcome Light",
+      "description": "Experience a captivating entrance. The dynamic welcome light sequence greets you with a sophisticated illumination display, setting the tone for your journey before you even step inside."
+    },
+    "alloyWheels": {
+      "title": "New design Alloy Wheels",
+      "description": "The 19-inch wheels take both performance and design to the next level, delivering the ideal balance between elegance and sportiness."
     }
+  },
+
+  "interior": {
+    "name": "Interior",
+    "tagline": "Go anywhere with ease",
+    "taglineHead": "Crafted for Comfort",
+    "closingText": "Whether you're cruising city streets, travelling the countryside or venturing off the beaten track, the new Kia Sportage delivers balanced performance, optimal fuel economy and a captivating driving experience.",
+    "panoramicDisplay": {
+      "title": "Panoramic Dual Curved 12.3\" Display",
+      "description": "12.3-inch dual panoramic curved screens with an intuitive interface, wireless Apple CarPlay & Android Auto, and real-time navigation."
+    },
+    "steeringWheel": {
+      "title": "Double D-Cut Steering Wheel",
+      "description": "A sporty, multi-function steering wheel that provides easy access to various controls while adding a touch of sophistication to the interior."
+    },
+    "ambientLighting": {
+      "title": "Ambient Lighting",
+      "description": "An interior ambient can be customizable by the direct-lighting mood lamp to the lower part of the slim vent in the crash pad."
+    },
+    "harmanKardon": {
+      "title": "Premium Harman/Kardon Audio System",
+      "description": "Immerse yourself in an exceptional musical experience during every drive. The Harman/Kardon® system features 8 powerful speakers strategically placed throughout the interior, an external amplifier and Active Sound Design (ASD) technology for rich, detailed sound and an unrivaled listening experience."
+    },
+
+    "panoramicSunroof": {
+      "title": "Panoramic Sunroof",
+      "description": "Full-length panoramic glass roof with electrochromic dimming, flooding the cabin with natural light while maintaining UV protection."
+    },
+
+    "headUpDisplay": {
+      "title": "10\" Head-Up Display",
+      "description": "By projecting key driving information on a 10-inch high-definition head-up display, you can focus more on the road ahead."
+    },
+    "surroundViewMonitor": {
+      "title": "Surround View Monitor (SVM)",
+      "description": "See it all, from every angle. The Surround View Monitor gives you a 360-degree bird's-eye view of your surroundings – perfect for navigating tight trails or crowded city streets."
+    },
+
+    "multiTerrainMode": {
+      "title": "Multi-Terrain Mode",
+      "description": "Sportage provides four driving modes, which can be freely switched according to your needs."
+    },
+    "allWheelDrive": {
+      "title": "All-Wheel Drive",
+      "description": "The intelligent All-Wheel Drive system continuously adapts to changing conditions, delivering optimal traction and stability to all four wheels, no matter the terrain or weather."
+    },
+    "turbocharged": {
+      "title": "2.0L Turbocharged",
+      "description": "The 2.0L Turbocharged engine delivers an impressive surge of power and torque, ensuring a dynamic, responsive, and thrilling driving experience on every trip."
+    }
+  },
+
+  "closingText": "Every road becomes a scenic adventure when you're behind the wheel of the Kia Sportage L, just let it lead the way and enjoy the ride.",
+  "driveWise": {
+    "title": "Drive Wise",
+    "tagline": "A smarter way to drive",
+    "forwardCollision": {
+      "title": "Forward Collision-Avoidance Assist 2",
+      "description": "FCA 2 monitors the surroundings and automatically assists braking when the risk of collision increases with a vehicle, motorcyclist, pedestrian, or cyclist ahead; with an oncoming vehicle from the opposite side or from the left/right side at an intersection; or with a directly oncoming vehicle in the same lane. It also automatically assists steering when there is a risk of collision with an oncoming vehicle or a vehicle in the next lane while changing lanes, as well as with a vehicle or pedestrian on the edge of the lane."
+    },
+    "laneFollowing": {
+      "title": "Lane Following Assist 2",
+      "description": "LFA 2 helps center the vehicle in the lane. Steering control has been improved and a Hands-On Detection (HOD) sensor can determine whether the driver is holding the steering wheel for optimal system performance."
+    },
+    "blindSpot": {
+      "title": "Blind-spot Collision-avoidance Assist",
+      "description": "Blind-Spot Collision-Avoidance Assist (BCA) warns if a lane departure is detected without the use of a turn signal. It automatically assists with steering to help prevent the vehicle from leaving the lane in such cases."
+    },
+    "parkingCollision": {
+      "title": "Parking Collision Avoidance Assist",
+      "description": "The Sportage's front, side and rear parking assist feature makes it easier to manoeuvre into and out of parking spaces. It detects pedestrians or obstacles in the area, provides warnings and, if there is an increased risk of collision, applies automatic emergency braking for added protection."
+    },
+    "smartCruiseControl": {
+      "title": "Smart Cruise Control 2",
+      "description": "SCC helps you drive at a preset speed while maintaining a safe distance from the vehicle ahead. It automatically brings the vehicle to a stop then proceeds again when the vehicle ahead accelerates. If the stop is extended, you may need to press the accelerator pedal. When activated, SCC drives automatically, reflecting the learned driving style."
+    },
+    "parkingDistanceWarning": {
+      "title": "Parking Distance Warning F/S/R",
+      "description": "The Kia Sportage Parking Distance Warning (PDW) system uses ultrasonic sensors on the bumpers to detect obstacles at low speeds, emitting audible alerts and visual warnings when in reverse or driving slowly."
+    },
+    "connectedServices": {
+      "title": "Connected Car Services & Over the Air update",
+      "description": "Allowing vehicles to receive software enhancements, security patches, and new features remotely via cellular or Wi-Fi, eliminating dealership visits."
+    },
+    "digitalKey": {
+      "title": "Digital Key",
+      "description": "A smartphone-based system allowing users to lock, unlock, and start their Kia vehicle via NFC or UWB technology using a smartphone or smart watch."
+    }
+  },
+  "colors": {
+    "personalize": "Personalize",
+    "chooseColor": "Choose Your Color",
+    "snowWhitePearl": "SNOW WHITE PEARL",
+    "auroraBlackPearl": "AURORA BLACK PEARL",
+    "urbanGray": "URBAN GRAY",
+    "aubanGrayMatte": "AUBAN GRAY MATTE",
+    "yachtBlue": "YACHT BLUE",
+    "jungleWoodGreen": "JUNGLE WOOD GREEN",
+    "wolfGray": "WOLF GRAY",
+    "saturnBlackTerracotta": "SATURN BLACK & TERRACOTTA BROWN"
   }
 }

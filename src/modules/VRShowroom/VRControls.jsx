@@ -14,11 +14,12 @@ const VRControls = ({  onViewChange, view}) => {
       <div id={'styling'}>
         <div  className='flex w-full justify-center gap-5 mt-2 lg:mt-0' >
           <button className={`text-sm lg:text-base rounded-lg w-auto lg:w-[134px] text-white  hover:bg-white px-6 lg:px-4  py-1.5 lg:py-[10px] bg-[#06141F] hover:text-[#06141F]  btn-showRoom ${locale=='ar'?'font-["GSSBold"]':'font-["InterBold"]'} cursor-pointer `} onClick={() => onViewChange('exterior')}
->             {t('exterior')}</button>
-          <button className={`text-sm lg:text-base rounded-lg w-auto lg:w-[134px] text-white hover:bg-white px-6 lg:px-4  py-1.5 lg:py-[10px] bg-[#06141F] hover:text-[#06141F]  btn-showRoom ${locale=='ar'?'font-["GSSBold"]':'font-["InterBold"]'} cursor-pointer `}onClick={() => onViewChange('interior')}
+>             {t('exterior.name')}</button>
+          <button className={`text-sm lg:text-base rounded-lg w-auto lg:w-[134px] text-white hover:bg-white px-6 lg:px-4  py-1.5 lg:py-[10px] bg-[#06141F] hover:text-[#06141F]  btn-showRoom ${locale == 'ar' ? 'font-["GSSBold"]' : 'font-["InterBold"]'} cursor-pointer `}
+            // onClick={() => onViewChange('interior')}
           >
           
-            {t('interior')}
+            {t('interior.name')}
           
            
           </button>

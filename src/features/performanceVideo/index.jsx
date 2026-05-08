@@ -1,5 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const EngineIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" className="h-10 w-10 lg:h-[64px] lg:w-[64px]" aria-hidden="true" fill="white">
@@ -20,40 +21,41 @@ const TerrainModeIcon = () => (
 export default function PerformanceVideoSection () {
     const sectionRef = useRef(null);
     const isSectionInView = useInView(sectionRef, { amount: 0.8 });
-
+    const { i18n, t } = useTranslation('common');
+    const isAr= i18n.language === 'ar';
     const specs = [
         {
             icon: <TerrainModeIcon />,
-            title: '2.0L Turbocharged',
-            description: 'Lorem ipsum dolor sit amet,',
+            title: t('interior.turbocharged.title'),
+            description: t('interior.turbocharged.description'),
         },
         {
             icon: <DrivetrainIcon />,
-            title: 'All-Wheel Drive',
-            description: 'Lorem ipsum dolor sit amet,',
+            title: t('interior.allWheelDrive.title'),
+            description: t('interior.allWheelDrive.description'),
         },
         {
             icon: <EngineIcon />,
-            title: 'Multi-Terrain Mode',
-            description: 'Lorem ipsum dolor sit amet,',
+            title: t('interior.multiTerrainMode.title'),
+            description: t('interior.multiTerrainMode.description'),
         },
     ];
 
     return (
-        <section ref={sectionRef} className="relative h-[120vh] w-screen overflow-hidden bg-[#06141F]">
+        <section ref={sectionRef} className="relative h-[100vh] w-screen overflow-hidden bg-[#06141F]">
             <div
-                className="pointer-events-none absolute inset-0 z-[15] h-[120vh] w-screen"
+                className="pointer-events-none absolute inset-0 z-[15] h-[100vh] w-screen"
                 style={{ background: 'linear-gradient(200deg, #06141F00 0%, #06141F 100%)' }}
             />
             <video
                 src="/assets/videos/vid1.mp4"
-                className="absolute inset-0 h-[120vh] w-full object-cover z-10"
+                className="absolute inset-0 h-[100vh] w-full object-cover z-10"
                 autoPlay
                 muted
                 loop
                 playsInline
             />
-            <div className='absolute inset-0 h-[120vh] w-screen z-[20] flex flex-col justify-between'>
+            <div className='absolute inset-0 h-[100vh] w-screen z-[20] flex flex-col justify-between'>
 
                 <div className='bg-[linear-gradient(180deg,rgba(6,20,31,0.7)_0%,rgba(118,153,178,0.3)_52%,rgba(6,20,31,0)_100%)] pt-[6vh] px-20 w-screen h-[25vh] flex flex-col justify-center'>
                     <motion.div
@@ -61,31 +63,26 @@ export default function PerformanceVideoSection () {
                         animate={isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -16 }}
                         transition={{ duration: 0.55, ease: 'easeOut' }}
                     >
-                        <p className="mb-1 text-[18px] text-white/90 lg:text-lg font-[InterBold]">Performance</p>
-                        <h2 className="text-[40px] leading-tight text-white lg:text-[36px] font-[InterRegular] mb-5">Enjoy All-roads with Confidence</h2>
+                        <p className="mb-1 text-[18px] text-white/90 lg:text-lg font-[InterBold]">{isAr ? 'الأداء' : 'Performance'}</p>
+                        <h2 className="text-[40px] leading-tight text-white lg:text-[36px] font-[InterRegular] mb-5">{t('interior.tagline')}</h2>
                     </motion.div>
                     <hr className='border-white w-[200px] ' />
 
                 </div>
-                <div className="grid grid-cols-1 gap-8 px-20 lg:grid-cols-3 lg:gap-12 justify-center">
-                    {specs.map((spec) => (
-                        <div
-                            key={spec.title}
-                        >
-                            <div className="mb-4 text-white/95 w-[64px] h-[64px]">{spec.icon}</div>
-                            <h3 className="mb-2 text-[32px] leading-[50px] text-white lg:text-[32px] font-[InterRegular]">{spec.title}</h3>
-                            <p className="text-[22px] leading-[1.2] text-white/65 lg:text-lg font-[InterRegular]">{spec.description}</p>
-                        </div>
-                    ))}
-                </div>
-                <div className='relative h-[20vh] flex flex-col justify-end w-screen items-center  px-20 '
-                    style={{
-                        background:'linear-gradient(180deg, #FFFFFF00 0%, #06141f 100%)'
-                }}
-                >
-                    <p className='text-[110px] text-white font-[InterBold]'>Nothing Can Stop You</p>
-
-                </div>
+             <div className='h-[50vh] flex flex-col justify-start'>
+                    <div className="grid grid-cols-1 gap-8 px-20 lg:grid-cols-3 lg:gap-12 justify-center">
+                        {specs.map((spec) => (
+                            <div
+                                key={spec.title}
+                            >
+                                <div className="mb-4 text-white/95 w-[64px] h-[64px]">{spec.icon}</div>
+                                <h3 className="mb-2 text-[32px] leading-[50px] text-white lg:text-[32px] font-[InterRegular]">{spec.title}</h3>
+                                <p className="text-[22px] leading-[1.2] text-white/65 lg:text-lg font-[InterRegular]">{spec.description}</p>
+                            </div>
+                        ))}
+                    </div>
+             </div>
+             
             </div>
 
 
